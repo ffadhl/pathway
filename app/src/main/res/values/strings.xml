@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">PathWay</string>
+
+    <!--    Activity Splash Screen-->
+    <string name="splashPathway">PathWay</string>
+    <string name="pathText">Path</string>
+    <string name="wayText">Way.</string>
+
+    <!--    Activity Welcome Screen-->
+    <string name="welcomeText1">Discover Your True</string>
+    <string name="welcomeText2">Here.</string>
+    <string name="welcomeDescription">Prepare yourself to face competition in the workforce with your path</string>
+    <string name="loginButton">Login</string>
+    <string name="registerButton">Register</string>
+
+    <!--    Activity Login Screen-->
+    <string name="loginWelcome">Welcome Cadet</string>
+    <string name="loginDescription">Login to your account to get started</string>
+    <string name="loginForgotPassword">Forgot the Password ?</string>
+    <string name="loginCreateNewAccount">Create new account</string>
+
+    <!--    CustomView-->
+    <string name="emailError">Invalid email</string>
+    <string name="passwordValidation">Password must not be less than 8 characters</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Name">Name</string>
+
+    <!--    Activity Register Screen-->
+    <string name="registerWelcome">Create Account</string>
+    <string name="registerDescription">Create an account so you can explore your path</string>
+    <string name="registerAlreadyHaveAccount">Already have an account</string>
+
+    <!--    Bottom Navigation-->
+    <string name="title_home">Home</string>
+    <string name="title_university">University</string>
+    <string name="title_profession">Profession</string>
+    <string name="title_goals">Goals</string>
+
+    <!--    Activity Home Screen-->
+</resources>

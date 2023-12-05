@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PathWay"
+        tools:targetApi="31">
+        <activity
+            android:name=".app.ui.navigation.navigationbottom.NavigationBottomActivity"
+            android:exported="false"
+            android:label="@string/title_activity_navigation_bottom" />
+        <activity
+            android:name=".app.ui.welcome.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.ui.detailprofession.DetailProfessionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.ui.detailuniversity.DetailUniversityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.ui.goals.GoalsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.ui.profession.ProfessionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.ui.university.UniversityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.ui.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.ui.splashscreen.SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.ui.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

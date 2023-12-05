@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PathWay" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blueDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/yellow</item>
+        <item name="colorSecondaryVariant">@color/yellowDark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+    </style>
+
+<!--    Button-->
+    <style name="blueButton">
+        <item name="android:backgroundTint">@color/blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppinssemibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="whiteButton">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/poppinssemibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+<!--    Login and Register Activity-->
+    <style name="loginregisterWelcome">
+        <item name="fontFamily">@font/poppinsbold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="loginregisterDescription">
+        <item name="fontFamily">@font/poppinsregular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_horizontal|top</item>
+    </style>
+
+    <style name="loginregisterCaption">
+        <item name="fontFamily">@font/poppinsmedium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/blackLight</item>
+    </style>
+
+<!--    CustomView-->
+    <style name="editTextBox">
+        <item name="android:background">@drawable/rounded_customview</item>
+    </style>
+
+    <style name="Theme.PathWay" parent="Base.Theme.PathWay" />
+</resources>
