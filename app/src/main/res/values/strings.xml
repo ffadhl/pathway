@@ -36,6 +36,7 @@
     <string name="title_university">University</string>
     <string name="title_profession">Profession</string>
     <string name="title_goals">Goals</string>
+    <string name="title_activity_main">MainActivity</string>
 
     <!--    Activity Home Screen-->
 </resources>

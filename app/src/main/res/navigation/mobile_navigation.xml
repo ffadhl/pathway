@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.fadhlalhafizh.pathway.app.ui.main.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_university"
+        android:name="com.fadhlalhafizh.pathway.app.ui.main.ui.university.UniversityFragment"
+        android:label="@string/title_university"
+        tools:layout="@layout/fragment_university" />
+
+    <fragment
+        android:id="@+id/navigation_profession"
+        android:name="com.fadhlalhafizh.pathway.app.ui.main.ui.profession.ProfessionFragment"
+        android:label="@string/title_profession"
+        tools:layout="@layout/fragment_profession" />
+
+    <fragment
+        android:id="@+id/navigation_goals"
+        android:name="com.fadhlalhafizh.pathway.app.ui.main.ui.goal.GoalsFragment"
+        android:label="@string/title_goals"
+        tools:layout="@layout/fragment_goals" />
+</navigation>
