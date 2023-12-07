@@ -7,34 +7,35 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.fadhlalhafizh.pathway.databinding.FragmentDashboardBinding
+import com.fadhlalhafizh.pathway.databinding.FragmentUniversityBinding
 
 class UniversityFragment : Fragment() {
 
-private var _binding: FragmentDashboardBinding? = null
-  // This property is only valid between onCreateView and
-  // onDestroyView.
-  private val binding get() = _binding!!
+    private var _binding: FragmentUniversityBinding? = null
 
-  override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
-  ): View {
-    val dashboardViewModel =
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val universityViewModel =
             ViewModelProvider(this).get(UniversityViewModel::class.java)
 
-    _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-    val root: View = binding.root
+        _binding = FragmentUniversityBinding.inflate(inflater, container, false)
+        val root: View = binding.root
 
-    val textView: TextView = binding.textDashboard
-    dashboardViewModel.text.observe(viewLifecycleOwner) {
-      textView.text = it
+        val textView: TextView = binding.textUniversity
+        universityViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
+        return root
     }
-    return root
-  }
 
-override fun onDestroyView() {
+    override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }

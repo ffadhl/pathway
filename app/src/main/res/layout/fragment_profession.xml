@@ -8,7 +8,7 @@
     tools:context=".app.ui.main.ui.profession.ProfessionFragment" >
 
     <TextView
-        android:id="@+id/text_notifications"
+        android:id="@+id/text_profession"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.fadhlalhafizh.pathway.databinding.FragmentNotificationsBinding
+import com.fadhlalhafizh.pathway.databinding.FragmentProfessionBinding
 
 class ProfessionFragment : Fragment() {
 
-private var _binding: FragmentNotificationsBinding? = null
+private var _binding: FragmentProfessionBinding? = null
   // This property is only valid between onCreateView and
   // onDestroyView.
   private val binding get() = _binding!!
@@ -21,14 +21,14 @@ private var _binding: FragmentNotificationsBinding? = null
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    val notificationsViewModel =
+    val professionViewModel =
             ViewModelProvider(this).get(ProfessionViewModel::class.java)
 
-    _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+    _binding = FragmentProfessionBinding.inflate(inflater, container, false)
     val root: View = binding.root
 
-    val textView: TextView = binding.textNotifications
-    notificationsViewModel.text.observe(viewLifecycleOwner) {
+    val textView: TextView = binding.textProfession
+    professionViewModel.text.observe(viewLifecycleOwner) {
       textView.text = it
     }
     return root
