@@ -22,7 +22,7 @@ private var _binding: FragmentProfessionBinding? = null
     savedInstanceState: Bundle?
   ): View {
     val professionViewModel =
-            ViewModelProvider(this).get(ProfessionViewModel::class.java)
+        ViewModelProvider(this)[ProfessionViewModel::class.java]
 
     _binding = FragmentProfessionBinding.inflate(inflater, container, false)
     val root: View = binding.root

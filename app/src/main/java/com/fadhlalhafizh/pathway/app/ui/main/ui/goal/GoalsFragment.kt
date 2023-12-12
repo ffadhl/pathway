@@ -19,7 +19,7 @@ class GoalsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val goalsViewModel =
-            ViewModelProvider(this).get(GoalsViewModel::class.java)
+            ViewModelProvider(this)[GoalsViewModel::class.java]
 
         _binding = FragmentGoalsBinding.inflate(inflater, container, false)
         val root: View = binding.root
