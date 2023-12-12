@@ -12,6 +12,11 @@
         <!-- Status bar color. -->
     </style>
 
+    <style name="AppTheme.SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
 <!--    Button-->
     <style name="blueButton">
         <item name="android:backgroundTint">@color/blue</item>

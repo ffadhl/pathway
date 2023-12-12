@@ -18,14 +18,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginBottom="24dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_splashScreen">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/tv_pathText"
@@ -54,4 +54,16 @@
             app:layout_constraintTop_toBottomOf="@+id/iv_splashScreen"
             tools:ignore="TextContrastCheck" />
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="@+id/iv_splashScreen"
+        app:layout_constraintStart_toStartOf="@+id/iv_splashScreen"
+        app:layout_constraintTop_toBottomOf="@+id/iv_splashScreen" />
 </androidx.constraintlayout.widget.ConstraintLayout>
