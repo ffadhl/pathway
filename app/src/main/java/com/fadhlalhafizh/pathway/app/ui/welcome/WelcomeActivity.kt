@@ -13,7 +13,6 @@ import com.fadhlalhafizh.pathway.app.ui.login.LoginActivity
 import com.fadhlalhafizh.pathway.app.ui.register.RegisterActivity
 import com.fadhlalhafizh.pathway.databinding.ActivityWelcomeBinding
 
-@Suppress("DEPRECATION")
 class WelcomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityWelcomeBinding
@@ -28,6 +27,7 @@ class WelcomeActivity : AppCompatActivity() {
         buttonAction()
     }
 
+    @Suppress("DEPRECATION")
     private fun viewWelcomeFullScreenSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.insetsController?.hide(WindowInsets.Type.statusBars())
