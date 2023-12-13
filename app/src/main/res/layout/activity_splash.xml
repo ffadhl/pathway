@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/tv_pathText"
+            android:id="@+id/tv_pathHere1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/poppinsbold"

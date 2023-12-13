@@ -21,7 +21,7 @@
         app:lottie_rawRes="@raw/welcomeanimation" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/ly_tvForDesc"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -38,9 +38,11 @@
             android:text="@string/welcomeText1"
             android:textColor="@color/blue"
             android:textSize="28sp"
+            android:alpha="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView_welcome"
+            tools:alpha="100"
             tools:ignore="TextSizeCheck" />
 
         <LinearLayout
@@ -49,20 +51,22 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_pathText"
+                android:id="@+id/tv_pathHere1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinsbold"
                 android:text="@string/pathText"
                 android:textColor="@color/yellow"
                 android:textSize="28sp"
+                android:alpha="0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_welcome1"
                 app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView_welcome"
+                tools:alpha="100"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
-                android:id="@+id/tv_welcome2"
+                android:id="@+id/tv_pathHere2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
@@ -70,9 +74,11 @@
                 android:text="@string/welcomeText2"
                 android:textColor="@color/blue"
                 android:textSize="28sp"
+                android:alpha="0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_welcome1"
-                app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView_welcome" />
+                app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView_welcome"
+                tools:alpha="100"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -85,20 +91,25 @@
         android:text="@string/welcomeDescription"
         android:textColor="@color/black"
         android:textSize="12sp"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/ly_tvForDesc"
+        tools:alpha="100"
         tools:ignore="TextSizeCheck" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_blueButton"
         style="@style/blueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
+        android:alpha="0"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
         app:layout_constraintStart_toStartOf="@+id/tv_welcomeDescription"
-        app:layout_constraintTop_toBottomOf="@+id/tv_welcomeDescription">
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcomeDescription"
+        tools:alpha="100">
 
         <Button
             android:id="@+id/btn_login_welcome"
@@ -111,14 +122,17 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_whiteButton"
         style="@style/whiteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
+        android:alpha="0"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_welcomeDescription"
-        app:layout_constraintTop_toBottomOf="@+id/tv_welcomeDescription">
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcomeDescription"
+        tools:alpha="100">
 
         <Button
             android:id="@+id/btn_register_welcome"
