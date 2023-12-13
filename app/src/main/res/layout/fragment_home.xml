@@ -36,11 +36,11 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="16dp"
+                android:src="@tools:sample/avatars"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ImageContrastCheck"
-                tools:src="@tools:sample/avatars" />
+                tools:ignore="ImageContrastCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

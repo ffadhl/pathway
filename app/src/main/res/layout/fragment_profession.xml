@@ -9,8 +9,8 @@
 
     <com.google.android.material.search.SearchBar
         android:id="@+id/professionSearch"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:hint="@string/searchBarProfession"
@@ -19,17 +19,36 @@
         app:layout_constraintTop_toTopOf="parent">
     </com.google.android.material.search.SearchBar>
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs_profession"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/professionSearch"
+        app:tabTextColor="@color/blue"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager_profession"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs_profession"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <TextView
         android:id="@+id/text_profession"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tabs_profession" />
 </androidx.constraintlayout.widget.ConstraintLayout>
