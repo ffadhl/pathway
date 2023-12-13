@@ -45,19 +45,21 @@
 
     </LinearLayout>
 
-<!--    <TextView-->
-<!--        android:id="@+id/text_home"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="8dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -69,37 +71,110 @@
             android:id="@+id/fragmentTextHome1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fragmentTextHome1"
             android:fontFamily="@font/poppinsbold"
-            android:textSize="20sp"
+            android:text="@string/fragmentTextHome1"
             android:textColor="@color/black"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
         <TextView
             android:id="@+id/fragmentTextHome2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="@string/fragmentTextHome2"
             android:fontFamily="@font/poppinsbold"
-            android:textSize="20sp"
+            android:text="@string/fragmentTextHome2"
             android:textColor="@color/blue"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
         <TextView
             android:id="@+id/fragmentTextHome3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="@string/fragmentTextHome3"
             android:fontFamily="@font/poppinsbold"
-            android:textSize="20sp"
+            android:text="@string/fragmentTextHome3"
             android:textColor="@color/black"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_pathGoals"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" >
+
+            <ImageView
+                android:id="@+id/iv_pathGoals"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/pathgoals"
+                android:contentDescription="@string/pathgoals" />
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_topUniversity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/topUniversity"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_topUniversity"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_topUniversity" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/newestJobs"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_topUniversity" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
