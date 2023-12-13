@@ -13,9 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="@string/registerWelcome"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:alpha="100"/>
 
     <TextView
         android:id="@+id/tv_registerDescription"
@@ -24,9 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/registerDescription"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="@+id/tv_registerWelcome"
         app:layout_constraintStart_toStartOf="@+id/tv_registerWelcome"
         app:layout_constraintTop_toBottomOf="@+id/tv_registerWelcome"
+        tools:alpha="100"
         tools:ignore="TextSizeCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -37,12 +41,14 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_registerDescription"
-        app:startIconDrawable="@drawable/ic_person">
+        app:startIconDrawable="@drawable/ic_person"
+        tools:alpha="100">
 
-        <com.fadhlalhafizh.pathway.app.ui.customview.CustomEmail
+        <com.google.android.material.textfield.TextInputEditText
             style="@style/editTextBox"
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
@@ -63,10 +69,12 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameEditTextLayout"
-        app:startIconDrawable="@drawable/ic_email">
+        app:startIconDrawable="@drawable/ic_email"
+        tools:alpha="100">
 
         <com.fadhlalhafizh.pathway.app.ui.customview.CustomEmail
             style="@style/editTextBox"
@@ -89,11 +97,13 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:alpha="0"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"
-        app:startIconDrawable="@drawable/ic_lock">
+        app:startIconDrawable="@drawable/ic_lock"
+        tools:alpha="100">
 
         <com.fadhlalhafizh.pathway.app.ui.customview.CustomPassword
             style="@style/editTextBox"
@@ -109,23 +119,25 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cv_btnLogin"
+        android:id="@+id/cv_btnRegister"
         style="@style/blueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:alpha="0"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/gl_LoginRegister4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gl_LoginRegister3">
+        app:layout_constraintTop_toTopOf="@+id/gl_LoginRegister3"
+        tools:alpha="100">
 
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_register"
             style="@style/blueButton"
             android:layout_width="350dp"
             android:layout_height="55dp"
-            android:text="@string/loginButton" />
+            android:text="@string/registerButton" />
 
     </androidx.cardview.widget.CardView>
 
@@ -136,9 +148,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/registerAlreadyHaveAccount"
+        android:alpha="0"
         app:layout_constraintEnd_toStartOf="@+id/gl_LoginRegister2"
         app:layout_constraintStart_toStartOf="@+id/gl_LoginRegister1"
-        app:layout_constraintTop_toBottomOf="@+id/cv_btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/cv_btnRegister"
+        tools:alpha="100"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_LoginRegister1"

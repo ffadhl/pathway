@@ -1,4 +1,4 @@
-package com.fadhlalhafizh.pathway.app.ui.main.ui.profession
+package com.fadhlalhafizh.pathway.app.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

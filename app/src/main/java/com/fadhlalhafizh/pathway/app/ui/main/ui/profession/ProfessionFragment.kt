@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.fadhlalhafizh.pathway.app.viewmodel.ProfessionViewModel
 import com.fadhlalhafizh.pathway.databinding.FragmentProfessionBinding
 
 class ProfessionFragment : Fragment() {
