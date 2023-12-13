@@ -46,6 +46,8 @@
     <string name="shapeCircle">Circle</string>
     <string name="pathgoals">pathGoals</string>
     <string name="topUniversity">Top University</string>
+    <string name="newestJobs">Newest Jobs</string>
+    <string name="seeAll">See all</string>
 
     <!--    Fragment University Screen-->
     <string name="searchBarUniversity">Find university</string>
@@ -55,5 +57,5 @@
 
     <!--    Fragment Goal Screen-->
     <string name="searchBarGoals">Find your goals</string>
-    <string name="newestJobs">Newest Jobs</string>
+
 </resources>

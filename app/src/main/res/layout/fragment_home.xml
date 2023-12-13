@@ -159,7 +159,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_topUniversity" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_newestJobs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -175,6 +175,32 @@
         android:layout_height="150dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_newestJobs" />
+
+    <TextView
+        android:id="@+id/tv_seeAll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/seeAll"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="12sp"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/tv_seeAll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/seeAll"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="12sp"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_topUniversity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
