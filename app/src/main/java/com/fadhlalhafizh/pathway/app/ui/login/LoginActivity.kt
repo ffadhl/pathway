@@ -3,10 +3,15 @@ package com.fadhlalhafizh.pathway.app.ui.login
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.fadhlalhafizh.pathway.R
+import com.fadhlalhafizh.pathway.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }
