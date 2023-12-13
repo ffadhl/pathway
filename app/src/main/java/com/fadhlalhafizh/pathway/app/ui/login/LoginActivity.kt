@@ -9,6 +9,7 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.fadhlalhafizh.pathway.app.ui.main.MainActivity
 import com.fadhlalhafizh.pathway.app.ui.register.RegisterActivity
 import com.fadhlalhafizh.pathway.databinding.ActivityLoginBinding
 
@@ -24,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
         viewLoginFullScreenSetup()
         playAnimation()
         goToRegister()
+        goToMain()
     }
 
     @Suppress("DEPRECATION")
@@ -63,6 +65,15 @@ class LoginActivity : AppCompatActivity() {
     private fun goToRegister() {
         binding.tvLoginCreateNewAccount.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+    }
+
+    private fun goToMain() {
+        binding.btnLogin.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             finish()

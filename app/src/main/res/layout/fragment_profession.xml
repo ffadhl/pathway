@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".app.ui.main.ui.profession.ProfessionFragment" >
 
+    <com.google.android.material.search.SearchBar
+        android:id="@+id/professionSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/searchBarProfession"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </com.google.android.material.search.SearchBar>
+
     <TextView
         android:id="@+id/text_profession"
         android:layout_width="match_parent"

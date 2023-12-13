@@ -38,5 +38,18 @@
     <string name="title_goals">Goals</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <!--    Activity Home Screen-->
+    <!--    Fragment Home Screen-->
+    <string name="searchBarHome">Find university, majority, or profession</string>
+    <string name="fragmentTextHome1">Get Your</string>
+    <string name="fragmentTextHome2">Path</string>
+    <string name="fragmentTextHome3">!</string>
+
+    <!--    Fragment University Screen-->
+    <string name="searchBarUniversity">Find university</string>
+
+    <!--    Fragment Profession Screen-->
+    <string name="searchBarProfession">Find profession</string>
+
+    <!--    Fragment Goal Screen-->
+    <string name="searchBarGoals">Find your goals</string>
 </resources>

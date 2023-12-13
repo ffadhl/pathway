@@ -60,4 +60,6 @@
     </style>
 
     <style name="Theme.PathWay" parent="Base.Theme.PathWay" />
+
+<!--    Search Bar-->
 </resources>

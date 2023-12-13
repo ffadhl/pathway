@@ -20,6 +20,7 @@ private var _binding: FragmentHomeBinding? = null
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
+
     val homeViewModel =
         ViewModelProvider(this)[HomeViewModel::class.java]
 
@@ -31,6 +32,7 @@ private var _binding: FragmentHomeBinding? = null
       textView.text = it
     }
     return root
+
   }
 
 override fun onDestroyView() {
