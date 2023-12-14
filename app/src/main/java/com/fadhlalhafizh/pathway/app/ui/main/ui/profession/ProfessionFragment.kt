@@ -7,35 +7,49 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.fadhlalhafizh.pathway.app.adapter.ViewPagerProfessionAdapter
 import com.fadhlalhafizh.pathway.app.viewmodel.ProfessionViewModel
 import com.fadhlalhafizh.pathway.databinding.FragmentProfessionBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ProfessionFragment : Fragment() {
 
-private var _binding: FragmentProfessionBinding? = null
-  // This property is only valid between onCreateView and
-  // onDestroyView.
-  private val binding get() = _binding!!
+    private var _binding: FragmentProfessionBinding? = null
+    private lateinit var viewPagerAdapter : ViewPagerProfessionAdapter
 
-  override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
-  ): View {
-    val professionViewModel =
-        ViewModelProvider(this)[ProfessionViewModel::class.java]
+    private val binding get() = _binding!!
 
-    _binding = FragmentProfessionBinding.inflate(inflater, container, false)
-    val root: View = binding.root
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val professionViewModel =
+            ViewModelProvider(this)[ProfessionViewModel::class.java]
 
-    val textView: TextView = binding.textProfession
-    professionViewModel.text.observe(viewLifecycleOwner) {
-      textView.text = it
+        _binding = FragmentProfessionBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+
+//        val textView: TextView = binding.textProfession
+//        professionViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
+
+        viewPagerAdapter = ViewPagerProfessionAdapter(childFragmentManager, viewLifecycleOwner.lifecycle)
+        with(binding){
+            viewpagerProfession.adapter = viewPagerAdapter
+
+            TabLayoutMediator(tabsProfession, viewpagerProfession) { tab, position ->
+                when (position) {
+                    0 -> tab.text = "Full Time"
+                    1 -> tab.text = "Internship"
+                }
+            }.attach()
+        }
+        return root
     }
-    return root
-  }
 
-override fun onDestroyView() {
+    override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }

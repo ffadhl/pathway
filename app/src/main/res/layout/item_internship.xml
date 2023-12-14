@@ -17,7 +17,7 @@
         android:layout_height="100dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_workplace"
+            android:id="@+id/iv_internshipWorkplace"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="16dp"
@@ -27,37 +27,37 @@
             card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_position"
+            android:id="@+id/tv_internshipPosition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/workPosition"
+            android:text="@string/internshipPosition"
             android:textSize="16sp"
             android:fontFamily="@font/poppinssemibold"
             android:textColor="@color/black"
-            card_view:layout_constraintStart_toEndOf="@+id/iv_workplace"
-            card_view:layout_constraintTop_toTopOf="@+id/iv_workplace" />
+            card_view:layout_constraintStart_toEndOf="@+id/iv_internshipWorkplace"
+            card_view:layout_constraintTop_toTopOf="@+id/iv_internshipWorkplace" />
 
         <TextView
-            android:id="@+id/tv_workPlace"
+            android:id="@+id/tv_internshipPlace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsmedium"
-            android:text="@string/workPlace"
+            android:text="@string/internshipPlace"
             android:textSize="12sp"
             android:textColor="@color/blackLight"
-            card_view:layout_constraintStart_toStartOf="@+id/tv_position"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_position" />
+            card_view:layout_constraintStart_toStartOf="@+id/tv_internshipPosition"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_internshipPosition" />
 
         <TextView
-            android:id="@+id/tv_domicile"
+            android:id="@+id/tv_internshipDomicile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/workDomicile"
+            android:text="@string/internshipDomicile"
             android:textSize="10sp"
             android:textColor="@color/blackLight"
-            card_view:layout_constraintStart_toStartOf="@+id/tv_workPlace"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_workPlace"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_internshipPlace"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_internshipPlace"
             tools:ignore="SmallSp" />
 
         <androidx.cardview.widget.CardView
@@ -71,11 +71,11 @@
             card_view:layout_constraintEnd_toEndOf="parent">
 
             <TextView
-                android:id="@+id/tv_workDuration"
+                android:id="@+id/tv_internshipDuration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/workType"
+                android:text="@string/internshipType"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 android:fontFamily="@font/poppinsmedium" />

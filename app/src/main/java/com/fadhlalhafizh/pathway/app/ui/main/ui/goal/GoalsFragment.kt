@@ -7,11 +7,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.fadhlalhafizh.pathway.app.adapter.ViewPagerGoalsAdapter
+import com.fadhlalhafizh.pathway.app.adapter.ViewPagerProfessionAdapter
 import com.fadhlalhafizh.pathway.app.viewmodel.GoalsViewModel
 import com.fadhlalhafizh.pathway.databinding.FragmentGoalsBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class GoalsFragment : Fragment() {
     private var _binding: FragmentGoalsBinding? = null
+    private lateinit var viewPagerAdapter : ViewPagerGoalsAdapter
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,10 +29,23 @@ class GoalsFragment : Fragment() {
         _binding = FragmentGoalsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGoals
-        goalsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+//        val textView: TextView = binding.textGoals
+//        goalsViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
+
+        viewPagerAdapter = ViewPagerGoalsAdapter(childFragmentManager, viewLifecycleOwner.lifecycle)
+        with(binding){
+            viewpagerGoals.adapter = viewPagerAdapter
+
+            TabLayoutMediator(tabsGoals, viewpagerGoals) { tab, position ->
+                when (position) {
+                    0 -> tab.text = "University"
+                    1 -> tab.text = "Profession"
+                }
+            }.attach()
         }
+
         return root
     }
 
