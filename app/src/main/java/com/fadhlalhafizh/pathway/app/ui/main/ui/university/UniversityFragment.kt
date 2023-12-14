@@ -7,15 +7,20 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.fadhlalhafizh.pathway.R
+import com.fadhlalhafizh.pathway.app.adapter.HomeProfession
+import com.fadhlalhafizh.pathway.app.adapter.HomeUniversity
+import com.fadhlalhafizh.pathway.app.adapter.UnivUniversity
 import com.fadhlalhafizh.pathway.app.viewmodel.UniversityViewModel
 import com.fadhlalhafizh.pathway.databinding.FragmentUniversityBinding
 
 class UniversityFragment : Fragment() {
 
     private var _binding: FragmentUniversityBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: UnivUniversity
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -29,10 +34,18 @@ class UniversityFragment : Fragment() {
         _binding = FragmentUniversityBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textUniversity
-        universityViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        val textView: TextView = binding.textUniversity
+//        universityViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
+
+        recyclerView = root.findViewById(R.id.rv_fragmentUniversity)
+        adapter = UnivUniversity()
+
+        recyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        recyclerView.adapter = adapter
+
         return root
     }
 
