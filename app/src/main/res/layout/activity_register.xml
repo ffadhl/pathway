@@ -56,7 +56,6 @@
             android:ems="10"
             android:fontFamily="@font/poppinsregular"
             android:hint="@string/Name"
-            android:inputType="textEmailAddress"
             android:textSize="14sp"
             tools:ignore="SpeakableTextPresentCheck,TextContrastCheck,VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>

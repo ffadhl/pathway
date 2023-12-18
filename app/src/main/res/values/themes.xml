@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.PathWay" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -57,6 +57,9 @@
 <!--    CustomView-->
     <style name="editTextBox">
         <item name="android:background">@drawable/rounded_customview</item>
+    </style>
+    <style name="editTextBoxForInputPath">
+        <item name="android:background">@drawable/rounded_customview_shadow</item>
     </style>
 
     <style name="Theme.PathWay" parent="Base.Theme.PathWay" />

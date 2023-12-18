@@ -83,4 +83,11 @@
     <string name="noDataDesc2">Please search to find your dream Universities.</string>
     <string name="noDataDesc3">Please search to find your dream Professions.</string>
 
+<!--    Input Path-->
+    <string name="iv_rules">Rules</string>
+    <string name="rules">Rules</string>
+    <string name="input_path">Type about yourself</string>
+    <string name="input_path_hint">Input your passion</string>
+    <string name="submitButton">Submit</string>
+
 </resources>
