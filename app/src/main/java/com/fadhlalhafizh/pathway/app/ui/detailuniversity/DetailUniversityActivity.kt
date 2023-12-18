@@ -1,8 +1,7 @@
 package com.fadhlalhafizh.pathway.app.ui.detailuniversity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.fadhlalhafizh.pathway.R
+import androidx.appcompat.app.AppCompatActivity
 import com.fadhlalhafizh.pathway.databinding.ActivityDetailUniversityBinding
 
 class DetailUniversityActivity : AppCompatActivity() {

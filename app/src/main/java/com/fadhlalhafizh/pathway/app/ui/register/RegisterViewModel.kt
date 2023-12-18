@@ -1,4 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.register
 
-class RegisterViewModel {
+import androidx.lifecycle.ViewModel
+
+class RegisterViewModel : ViewModel() {
 }

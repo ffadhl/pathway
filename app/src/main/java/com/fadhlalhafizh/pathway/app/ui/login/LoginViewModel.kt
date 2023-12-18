@@ -1,4 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.login
 
-class LoginViewModel {
+import androidx.lifecycle.ViewModel
+
+class LoginViewModel : ViewModel() {
 }

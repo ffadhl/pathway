@@ -17,10 +17,8 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: HomeUniversityAdapter
-
     private lateinit var recyclerView2: RecyclerView
     private lateinit var adapter2: HomeProfessionAdapter
 
@@ -35,11 +33,6 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-//        val textView: TextView = binding.textUniversity
-//        homeViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
 
         recyclerView = root.findViewById(R.id.rv_topUniversity)
         adapter = HomeUniversityAdapter()

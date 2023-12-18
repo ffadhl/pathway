@@ -1,4 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.main.ui.goal.university
 
-class GoalUniversityViewModel {
+import androidx.lifecycle.ViewModel
+
+class GoalUniversityViewModel : ViewModel(){
 }

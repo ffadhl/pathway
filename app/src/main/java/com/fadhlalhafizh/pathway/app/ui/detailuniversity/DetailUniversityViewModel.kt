@@ -1,4 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.detailuniversity
 
-class DetailUniversityViewModel {
+import androidx.lifecycle.ViewModel
+
+class DetailUniversityViewModel : ViewModel(){
 }

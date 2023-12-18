@@ -1,4 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.login.forgotpassword
 
-class ForgotPasswordViewModel {
+import androidx.lifecycle.ViewModel
+
+class ForgotPasswordViewModel : ViewModel() {
 }
