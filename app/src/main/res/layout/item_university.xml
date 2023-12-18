@@ -88,7 +88,7 @@
                     tools:ignore="SmallSp" />
 
                 <TextView
-                    android:id="@+id/tv_worldRank3"
+                    android:id="@+id/tv_worldRank2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"

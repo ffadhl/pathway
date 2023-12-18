@@ -83,11 +83,29 @@
     <string name="noDataDesc2">Please search to find your dream Universities.</string>
     <string name="noDataDesc3">Please search to find your dream Professions.</string>
 
-<!--    Input Path-->
+    <!--    Input Path-->
     <string name="iv_rules">Rules</string>
     <string name="rules">Rules</string>
     <string name="input_path">Type about yourself</string>
     <string name="input_path_hint">Input your passion</string>
     <string name="submitButton">Submit</string>
+    <string name="forgotPasswordWelcome">Forgot password</string>
+    <string name="forgotPasswordDescription">Forgot your password cadet? enter registered email to reset password</string>
+
+    <!--    Detail University-->
+    <string name="university">University</string>
+    <string name="backArrow">Back arrow</string>
+    <string name="backgroundUniv">Background University</string>
+    <string name="loremIpsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </string>
+    <string name="goals_detailUniv">Goals</string>
+    <!--    Detail Passion-->
+
+<!--    Maps Activity-->
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
 
 </resources>
