@@ -12,7 +12,6 @@
         android:layout_height="300dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,5 +19,28 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/nodata" />
+
+    <TextView
+        android:id="@+id/tv_noData_goals_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/noData"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView_goals_profession"
+        app:layout_constraintStart_toStartOf="@+id/lottieAnimationView_goals_profession"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView_goals_profession" />
+
+    <TextView
+        android:id="@+id/tv_noDataDesc_goals_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/noDataDesc1"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_noData_goals_profession"
+        app:layout_constraintStart_toStartOf="@+id/tv_noData_goals_profession"
+        app:layout_constraintTop_toBottomOf="@+id/tv_noData_goals_profession" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

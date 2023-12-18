@@ -20,4 +20,27 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/nodata" />
 
+    <TextView
+        android:id="@+id/tv_noData_goals_university"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/noData"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView_goals_university"
+        app:layout_constraintStart_toStartOf="@+id/lottieAnimationView_goals_university"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView_goals_university" />
+
+    <TextView
+        android:id="@+id/tv_noDataDesc_goals_university"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/noDataDesc2"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_noData_goals_university"
+        app:layout_constraintStart_toStartOf="@+id/tv_noData_goals_university"
+        app:layout_constraintTop_toBottomOf="@+id/tv_noData_goals_university" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

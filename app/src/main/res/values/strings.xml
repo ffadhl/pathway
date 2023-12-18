@@ -76,8 +76,11 @@
     <string name="internshipPlace">Workplace</string>
     <string name="internshipDomicile">Jakarta, Indonesia</string>
     <string name="internshipType">Internship</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--    No Data-->
+    <string name="noData">No data found</string>
+    <string name="noDataDesc1">Please search to find your dream jobs.</string>
+    <string name="noDataDesc2">Please search to find your dream Universities.</string>
+    <string name="noDataDesc3">Please search to find your dream Professions.</string>
 
 </resources>

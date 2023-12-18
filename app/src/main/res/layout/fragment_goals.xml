@@ -9,8 +9,8 @@
 
     <com.google.android.material.search.SearchBar
         android:id="@+id/goalsSearch"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:hint="@string/searchBarGoals"
