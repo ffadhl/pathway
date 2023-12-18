@@ -4,12 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.fadhlalhafizh.pathway.app.adapter.ViewPagerGoalsAdapter
-import com.fadhlalhafizh.pathway.app.adapter.ViewPagerProfessionAdapter
-import com.fadhlalhafizh.pathway.app.viewmodel.GoalsViewModel
 import com.fadhlalhafizh.pathway.databinding.FragmentGoalsBinding
 import com.google.android.material.tabs.TabLayoutMediator
 

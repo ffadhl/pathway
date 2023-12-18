@@ -1,4 +1,4 @@
-package com.fadhlalhafizh.pathway.app.adapter
+package com.fadhlalhafizh.pathway.app.adapter.home
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.fadhlalhafizh.pathway.R
 
-class UnivUniversityAdapter: RecyclerView.Adapter<UnivUniversityAdapter.MyViewHolder>() {
-    class MyViewHolder(item : View): RecyclerView.ViewHolder(item) {
-
-    }
+class HomeUniversityAdapter: RecyclerView.Adapter<HomeUniversityAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_university, parent, false)
@@ -17,9 +14,14 @@ class UnivUniversityAdapter: RecyclerView.Adapter<UnivUniversityAdapter.MyViewHo
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return 5
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
     }
+
+    class MyViewHolder(item : View): RecyclerView.ViewHolder(item) {
+
+    }
+
 }

@@ -9,9 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fadhlalhafizh.pathway.R
-import com.fadhlalhafizh.pathway.app.adapter.HomeProfessionAdapter
-import com.fadhlalhafizh.pathway.app.adapter.HomeUniversityAdapter
-import com.fadhlalhafizh.pathway.app.viewmodel.HomeViewModel
+import com.fadhlalhafizh.pathway.app.adapter.home.HomeProfessionAdapter
+import com.fadhlalhafizh.pathway.app.adapter.home.HomeUniversityAdapter
 import com.fadhlalhafizh.pathway.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {

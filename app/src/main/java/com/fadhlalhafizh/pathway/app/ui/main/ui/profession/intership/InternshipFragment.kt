@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fadhlalhafizh.pathway.R
-import com.fadhlalhafizh.pathway.app.adapter.FullTimeAdapter
-import com.fadhlalhafizh.pathway.app.adapter.InternshipAdapter
-import com.fadhlalhafizh.pathway.databinding.FragmentFullTimeBinding
+import com.fadhlalhafizh.pathway.app.adapter.profession.InternshipAdapter
 import com.fadhlalhafizh.pathway.databinding.FragmentInternshipBinding
 
 class InternshipFragment : Fragment() {

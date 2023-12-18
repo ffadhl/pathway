@@ -9,8 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fadhlalhafizh.pathway.R
-import com.fadhlalhafizh.pathway.app.adapter.UnivUniversityAdapter
-import com.fadhlalhafizh.pathway.app.viewmodel.UniversityViewModel
+import com.fadhlalhafizh.pathway.app.adapter.university.UnivUniversityAdapter
 import com.fadhlalhafizh.pathway.databinding.FragmentUniversityBinding
 
 class UniversityFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.fadhlalhafizh.pathway.app.viewmodel
+package com.fadhlalhafizh.pathway.app.ui.main.ui.university
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

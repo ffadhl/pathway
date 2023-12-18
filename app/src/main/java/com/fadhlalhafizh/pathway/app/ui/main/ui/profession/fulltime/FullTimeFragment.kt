@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fadhlalhafizh.pathway.R
-import com.fadhlalhafizh.pathway.app.adapter.FullTimeAdapter
+import com.fadhlalhafizh.pathway.app.adapter.profession.FullTimeAdapter
 import com.fadhlalhafizh.pathway.databinding.FragmentFullTimeBinding
 
 class FullTimeFragment : Fragment() {
