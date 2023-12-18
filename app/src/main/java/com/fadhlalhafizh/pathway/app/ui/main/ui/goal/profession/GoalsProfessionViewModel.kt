@@ -1,4 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.main.ui.goal.profession
 
-class GoalsProfessionViewModel {
+import androidx.lifecycle.ViewModel
+
+class GoalsProfessionViewModel : ViewModel() {
 }

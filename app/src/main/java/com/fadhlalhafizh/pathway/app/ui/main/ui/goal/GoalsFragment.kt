@@ -12,7 +12,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class GoalsFragment : Fragment() {
     private var _binding: FragmentGoalsBinding? = null
-    private lateinit var viewPagerAdapter : ViewPagerGoalsAdapter
+    private lateinit var viewPagerAdapter: ViewPagerGoalsAdapter
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -26,13 +26,8 @@ class GoalsFragment : Fragment() {
         _binding = FragmentGoalsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textGoals
-//        goalsViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
-
         viewPagerAdapter = ViewPagerGoalsAdapter(childFragmentManager, viewLifecycleOwner.lifecycle)
-        with(binding){
+        with(binding) {
             viewpagerGoals.adapter = viewPagerAdapter
 
             TabLayoutMediator(tabsGoals, viewpagerGoals) { tab, position ->
@@ -42,7 +37,6 @@ class GoalsFragment : Fragment() {
                 }
             }.attach()
         }
-
         return root
     }
 
@@ -50,5 +44,4 @@ class GoalsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

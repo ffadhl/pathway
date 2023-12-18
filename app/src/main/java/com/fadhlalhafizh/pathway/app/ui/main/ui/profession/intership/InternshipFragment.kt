@@ -1,10 +1,10 @@
 package com.fadhlalhafizh.pathway.app.ui.main.ui.profession.intership
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fadhlalhafizh.pathway.R
@@ -16,9 +16,7 @@ class InternshipFragment : Fragment() {
     private var _binding: FragmentInternshipBinding? = null
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: InternshipAdapter
-
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

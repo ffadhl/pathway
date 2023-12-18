@@ -1,4 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.main.ui.profession.intership
 
-class InternshipViewModel {
+import androidx.lifecycle.ViewModel
+
+class InternshipViewModel : ViewModel() {
 }

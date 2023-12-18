@@ -1,4 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.main
 
-class MainViewModel {
+import androidx.lifecycle.ViewModel
+
+class MainViewModel : ViewModel() {
 }

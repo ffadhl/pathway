@@ -13,8 +13,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 class ProfessionFragment : Fragment() {
 
     private var _binding: FragmentProfessionBinding? = null
-    private lateinit var viewPagerAdapter : ViewPagerProfessionAdapter
-
+    private lateinit var viewPagerAdapter: ViewPagerProfessionAdapter
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -28,13 +27,9 @@ class ProfessionFragment : Fragment() {
         _binding = FragmentProfessionBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textProfession
-//        professionViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
-
-        viewPagerAdapter = ViewPagerProfessionAdapter(childFragmentManager, viewLifecycleOwner.lifecycle)
-        with(binding){
+        viewPagerAdapter =
+            ViewPagerProfessionAdapter(childFragmentManager, viewLifecycleOwner.lifecycle)
+        with(binding) {
             viewpagerProfession.adapter = viewPagerAdapter
 
             TabLayoutMediator(tabsProfession, viewpagerProfession) { tab, position ->

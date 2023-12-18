@@ -30,11 +30,6 @@ class UniversityFragment : Fragment() {
         _binding = FragmentUniversityBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textUniversity
-//        universityViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
-
         recyclerView = root.findViewById(R.id.rv_fragmentUniversity)
         adapter = UnivUniversityAdapter()
 

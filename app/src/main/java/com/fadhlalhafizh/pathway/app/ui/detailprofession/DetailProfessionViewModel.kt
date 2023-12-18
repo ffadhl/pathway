@@ -1,4 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.detailprofession
 
-class DetailProfessionViewModel {
+import androidx.lifecycle.ViewModel
+
+class DetailProfessionViewModel : ViewModel() {
 }

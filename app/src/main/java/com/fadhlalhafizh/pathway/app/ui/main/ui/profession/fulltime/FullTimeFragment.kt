@@ -16,7 +16,6 @@ class FullTimeFragment : Fragment() {
     private var _binding: FragmentFullTimeBinding? = null
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: FullTimeAdapter
-
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
