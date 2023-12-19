@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.fadhlalhafizh.pathway.data.remote.request.RegistrationRequest
 import com.fadhlalhafizh.pathway.data.repository.UserRepository
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
@@ -13,17 +14,29 @@ class RegisterViewModel(private val userRepository: UserRepository) : ViewModel(
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
-    private val _isErrorMessage = MutableLiveData<String>()
-    val errorMessage: LiveData<String> = _isErrorMessage
+    private val _isErrorMessage = MutableLiveData<String?>()
+    val errorMessage: LiveData<String?> = _isErrorMessage
 
     fun register(name: String, email: String, password: String) {
         viewModelScope.launch {
             _isLoading.value = true
             try {
-                val message = userRepository.signupUser(name, email, password).message
-                _isErrorMessage.value = message!!
+                val registrationRequest = RegistrationRequest(name, email, password)
+                val result = userRepository.signupUser(
+                    registrationRequest.name,
+                    registrationRequest.email,
+                    registrationRequest.password)
+
+                if (result.isSuccess) {
+                    _isErrorMessage.value = null
+                } else {
+                    _isErrorMessage.value = result.exceptionOrNull()?.message
+                        ?: "An unexpected error occurred"
+                }
             } catch (e: HttpException) {
-                _isErrorMessage.value = "Server error: ${e.code()}"
+                _isErrorMessage.value = "Network error: ${e.message}"
+            } catch (e: Exception) {
+                _isErrorMessage.value = "An unexpected error occurred"
             } finally {
                 _isLoading.value = false
             }

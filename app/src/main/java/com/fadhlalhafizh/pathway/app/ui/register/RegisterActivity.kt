@@ -32,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         viewModelRegister.errorMessage.observe(this) {
-            showAlertMessage(it)
+            showAlertMessage(it.toString())
         }
 
         viewRegisterFullScreenSetup()

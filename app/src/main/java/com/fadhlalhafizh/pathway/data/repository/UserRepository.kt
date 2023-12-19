@@ -2,6 +2,8 @@ package com.fadhlalhafizh.pathway.data.repository
 
 import com.fadhlalhafizh.pathway.data.model.UserModel
 import com.fadhlalhafizh.pathway.data.preferences.UserPreference
+import com.fadhlalhafizh.pathway.data.remote.request.LoginRequest
+import com.fadhlalhafizh.pathway.data.remote.request.RegistrationRequest
 import com.fadhlalhafizh.pathway.data.remote.response.LoginResponse
 import com.fadhlalhafizh.pathway.data.remote.response.RegisterResponse
 import com.fadhlalhafizh.pathway.data.remote.retrofit.ApiService
@@ -24,12 +26,22 @@ class UserRepository private constructor(
         userPreference.clearToken()
     }
 
-    suspend fun signupUser(name: String, email: String, password: String): RegisterResponse {
-        return apiService.signup(name, email, password)
+    suspend fun signupUser(name: String, email: String, password: String): Result<RegisterResponse> {
+        return try {
+            val response = apiService.register(RegistrationRequest(name, email, password))
+            Result.success(response)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
     }
 
-    suspend fun signInUser(email: String, password: String): LoginResponse {
-        return apiService.login(email, password)
+    suspend fun signInUser(email: String, password: String): Result<LoginResponse> {
+        return try {
+            val response = apiService.login(LoginRequest(email, password))
+            Result.success(response)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
     }
 
     companion object {

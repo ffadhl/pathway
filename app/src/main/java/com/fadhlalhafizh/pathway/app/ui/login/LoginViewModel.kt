@@ -28,6 +28,6 @@ class LoginViewModel(private val userRepository: UserRepository) : ViewModel() {
         _isLoading.postValue(true)
         val response = userRepository.signInUser(email, password)
         _isLoading.postValue(false)
-        return response
+        return response.getOrNull()!!
     }
 }
