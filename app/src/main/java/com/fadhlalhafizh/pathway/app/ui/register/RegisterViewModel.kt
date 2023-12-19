@@ -25,13 +25,14 @@ class RegisterViewModel(private val userRepository: UserRepository) : ViewModel(
                 val result = userRepository.signupUser(
                     registrationRequest.name,
                     registrationRequest.email,
-                    registrationRequest.password)
+                    registrationRequest.password
+                )
 
                 if (result.isSuccess) {
-                    _isErrorMessage.value = null
+                    _isErrorMessage.value = result.getOrNull()?.message
                 } else {
-                    _isErrorMessage.value = result.exceptionOrNull()?.message
-                        ?: "An unexpected error occurred"
+                    _isErrorMessage.value = result.getOrNull()?.message
+                        ?: "the email has already been used"
                 }
             } catch (e: HttpException) {
                 _isErrorMessage.value = "Network error: ${e.message}"

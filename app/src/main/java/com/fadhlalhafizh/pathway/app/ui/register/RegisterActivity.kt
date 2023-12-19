@@ -9,6 +9,7 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.fadhlalhafizh.pathway.R
 import com.fadhlalhafizh.pathway.app.ui.login.LoginActivity
@@ -104,15 +105,16 @@ class RegisterActivity : AppCompatActivity() {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
-    private fun showAlertMessage(message: String) {
-        val dialogBuilder = android.app.AlertDialog.Builder(this)
-        dialogBuilder.setMessage(message)
+    private fun showAlertMessage(message: String?) {
+        val dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setMessage(message ?: "An unexpected error occurred")
             .setCancelable(false)
             .setPositiveButton("Ok") { dialog, _ ->
                 dialog.dismiss()
-                if (message == "User created") {
+                if (message == "Register sucessfull !") {
                     val intent = Intent(this, LoginActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                    intent.flags =
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(intent)
                     finish()
                 } else {
