@@ -112,5 +112,8 @@
     <string name="satellite_type">Satellite</string>
     <string name="terrain_type">Terrain</string>
     <string name="hybrid_type">Hybrid</string>
+    <string name="inputName">Enter name</string>
+    <string name="inputEmail">Enter email</string>
+    <string name="inputPassword">Enter password</string>
 
 </resources>
