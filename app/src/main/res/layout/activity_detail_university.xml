@@ -129,12 +129,18 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:text="@string/loremIpsum"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppinsregular"
+        android:justificationMode="inter_word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tv__universitiesAdd_detailUniv"
-        app:layout_constraintTop_toBottomOf="@+id/tv__universitiesAdd_detailUniv" />
+        app:layout_constraintTop_toBottomOf="@+id/tv__universitiesAdd_detailUniv"
+        tools:ignore="UnusedAttribute" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -144,6 +150,7 @@
         android:focusable="true"
         android:src="@drawable/toogle_goals"
         android:backgroundTint="@color/blue"
+        app:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

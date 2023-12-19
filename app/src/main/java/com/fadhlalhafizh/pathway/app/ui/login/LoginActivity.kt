@@ -9,6 +9,7 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.fadhlalhafizh.pathway.app.ui.login.forgotpassword.ForgotPasswordActivity
 import com.fadhlalhafizh.pathway.app.ui.main.MainActivity
 import com.fadhlalhafizh.pathway.app.ui.register.RegisterActivity
 import com.fadhlalhafizh.pathway.databinding.ActivityLoginBinding
@@ -26,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
         playAnimation()
         goToRegister()
         goToMain()
+        goToForgotPassword()
     }
 
     @Suppress("DEPRECATION")
@@ -74,6 +76,15 @@ class LoginActivity : AppCompatActivity() {
     private fun goToMain() {
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+    }
+
+    private fun goToForgotPassword() {
+        binding.tvLoginForgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             finish()

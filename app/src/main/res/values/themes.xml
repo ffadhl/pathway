@@ -63,8 +63,9 @@
         <item name="android:background">@drawable/rounded_customview_shadow</item>
     </style>
 
-<!--    MapsActivity-->
-    <style name="Base.Theme.MyGoogleMaps" parent="Theme.Material3.DayNight"/>
+    <!--    MapsActivity-->
+    <style name="Base.Theme.MyGoogleMaps" parent="Theme.Material3.DayNight" />
+
 
     <style name="Theme.PathWay" parent="Base.Theme.PathWay" />
 </resources>

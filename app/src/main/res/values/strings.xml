@@ -99,9 +99,14 @@
     <string name="loremIpsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </string>
     <string name="goals_detailUniv">Goals</string>
-    <!--    Detail Passion-->
 
-<!--    Maps Activity-->
+    <!--    Detail Passion-->
+    <string name="positionName_detailProf">Position</string>
+    <string name="workPlace_detailProf">Workplace</string>
+    <string name="workDomicile_detailProf">Domicile</string>
+    <string name="profession">Profession</string>
+
+    <!--    Maps Activity-->
     <string name="title_activity_maps">MapsActivity</string>
     <string name="normal_type">Normal</string>
     <string name="satellite_type">Satellite</string>
