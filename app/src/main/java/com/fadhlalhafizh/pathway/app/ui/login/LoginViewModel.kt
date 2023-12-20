@@ -28,6 +28,7 @@ class LoginViewModel(private val userRepository: UserRepository) : ViewModel() {
         _isLoading.postValue(true)
         val response = userRepository.signInUser(email, password)
         _isLoading.postValue(false)
-        return response.getOrNull()!!
+
+        return response?.getOrNull() ?: LoginResponse(error = true, message = "Incorrect Email or Password, Try Again!")
     }
 }
