@@ -111,6 +111,8 @@ class LoginActivity : AppCompatActivity() {
                         if (!error) {
                             viewModelLogin.saveSession(UserModel(email, true))
                             showSuccessDialog(loginResult.message)
+                        } else {
+                            showErrorDialog(loginResult.message)
                         }
                     } catch (e: HttpException) {
                         showErrorDialog("Server error: ${e.code()}")
@@ -124,16 +126,19 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showSuccessDialog(message: String?) {
-        AlertDialog.Builder(this@LoginActivity).apply {
-            setTitle("Success")
-            setMessage(message)
-            setPositiveButton("Ok") { _, _ ->
-                navigateToMainActivity()
+        if (!isFinishing && !isDestroyed) {
+            AlertDialog.Builder(this@LoginActivity).apply {
+                setTitle("Success")
+                setMessage(message)
+                setPositiveButton("Ok") { _, _ ->
+                    navigateToMainActivity()
+                }
+                val alertMessage = create()
+                alertMessage.show()
             }
-            val alertMessage = create()
-            alertMessage.show()
         }
     }
+
 
     private fun navigateToMainActivity() {
         val intent = Intent(this@LoginActivity, MainActivity::class.java)
@@ -142,10 +147,10 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun showErrorDialog(errorMessage: String) {
+    private fun showErrorDialog(errorMessage: String?) {
         AlertDialog.Builder(this@LoginActivity).apply {
             setTitle("Alert")
-            setMessage(errorMessage)
+            setMessage(errorMessage ?: "Incorrect Email or Password, Try Again!")
             setPositiveButton("Ok") { _, _ ->
                 clearInputFields()
             }

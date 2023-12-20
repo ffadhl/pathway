@@ -7,14 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fadhlalhafizh.pathway.R
 import com.fadhlalhafizh.pathway.app.adapter.home.HomeProfessionAdapter
 import com.fadhlalhafizh.pathway.app.adapter.home.HomeUniversityAdapter
 import com.fadhlalhafizh.pathway.app.ui.path.inputpath.InputPathActivity
+import com.fadhlalhafizh.pathway.app.ui.welcome.WelcomeActivity
+import com.fadhlalhafizh.pathway.app.viewmodel.ViewModelFactory
 import com.fadhlalhafizh.pathway.databinding.FragmentHomeBinding
+import de.hdodenhof.circleimageview.CircleImageView
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -24,16 +30,15 @@ class HomeFragment : Fragment() {
     private lateinit var adapter: HomeUniversityAdapter
     private lateinit var recyclerView2: RecyclerView
     private lateinit var adapter2: HomeProfessionAdapter
+    private val viewModelHome by viewModels<HomeViewModel> {
+        ViewModelFactory.getInstance(requireContext())
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        val homeViewModel =
-            ViewModelProvider(this)[HomeViewModel::class.java]
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -57,8 +62,20 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        val civHome = root.findViewById<CircleImageView>(R.id.civ_home)
+        civHome.setOnClickListener {
+            logout()
+        }
+
         return root
     }
+
+    private fun logout() {
+        CoroutineScope(Dispatchers.IO).launch { viewModelHome.logout() }
+        val intent = Intent(requireContext(), WelcomeActivity::class.java)
+        startActivity(intent)
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
