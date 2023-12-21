@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.fadhlalhafizh.pathway.app.ui.login.LoginViewModel
 import com.fadhlalhafizh.pathway.app.ui.main.MainViewModel
 import com.fadhlalhafizh.pathway.app.ui.main.ui.home.HomeViewModel
+import com.fadhlalhafizh.pathway.app.ui.path.inputpath.InputPathActivityViewModel
 import com.fadhlalhafizh.pathway.app.ui.register.RegisterViewModel
 import com.fadhlalhafizh.pathway.data.repository.UserRepository
 import com.fadhlalhafizh.pathway.di.Injection
@@ -30,6 +31,10 @@ class ViewModelFactory(private val repository: UserRepository) :
 
             modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
                 HomeViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(InputPathActivityViewModel::class.java) -> {
+                InputPathActivityViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

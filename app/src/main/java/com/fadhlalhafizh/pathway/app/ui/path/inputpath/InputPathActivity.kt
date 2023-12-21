@@ -1,16 +1,20 @@
 package com.fadhlalhafizh.pathway.app.ui.path.inputpath
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.fadhlalhafizh.pathway.app.ui.path.outputpath.OutputPathActivity
+import com.fadhlalhafizh.pathway.app.viewmodel.ViewModelFactory
+import com.fadhlalhafizh.pathway.data.remote.response.ResultMajorResponse
 import com.fadhlalhafizh.pathway.databinding.ActivityInputPathBinding
 
 class InputPathActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInputPathBinding
+    private val viewModelInput by viewModels<InputPathActivityViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,31 +22,24 @@ class InputPathActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         window.setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
-        submit()
+        setupSubmitButton()
     }
 
-    private fun submit() {
+    private fun setupSubmitButton() {
         binding.btnSubmit.setOnClickListener {
-            // Create an AlertDialog
-            val alertDialogBuilder = AlertDialog.Builder(this)
-            alertDialogBuilder.setMessage("Done")
-
-            // Set positive button
-            alertDialogBuilder.setPositiveButton("OK",
-                DialogInterface.OnClickListener { dialog, which ->
-                    // User clicked OK button
-                    navigateToOutputPathActivity()
-                })
-
-            // Create and show the alert dialog
-            val alertDialog = alertDialogBuilder.create()
-            alertDialog.show()
+            val inputText = binding.inputPathEditText.text?.toString()
+            if (inputText.isNullOrEmpty()) {
+                binding.inputPathEditTextLayout.error = "Please enter a valid input."
+            } else {
+                viewModelInput.processInput(inputText)
+            }
         }
     }
 
-    private fun navigateToOutputPathActivity() {
+    private fun navigateToOutputPathActivity(result: ResultMajorResponse) {
         val intent = Intent(this, OutputPathActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.putExtra("PREDICTION_RESULT", result.prediksiJurusan)
+        intent.putExtra("MESSAGE", result.message)
         startActivity(intent)
         finish()
     }
