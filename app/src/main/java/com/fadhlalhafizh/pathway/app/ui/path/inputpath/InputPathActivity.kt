@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import com.fadhlalhafizh.pathway.app.ui.path.outputpath.OutputPathActivity
 import com.fadhlalhafizh.pathway.app.ui.path.outputpath.OutputPathActivityViewModel
 import com.fadhlalhafizh.pathway.app.viewmodel.ViewModelFactory
@@ -16,7 +15,7 @@ class InputPathActivity : AppCompatActivity() {
     private val viewModelInput by viewModels<InputPathActivityViewModel> {
         ViewModelFactory.getInstance(this)
     }
-    private var viewModelOutput: OutputPathActivityViewModel? = null
+    private val viewModelOutput: OutputPathActivityViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +32,6 @@ class InputPathActivity : AppCompatActivity() {
                 navigateToOutputPathActivity()
             }
         }
-
-        // Initialize viewModelOutput
-        viewModelOutput = ViewModelProvider(this).get(OutputPathActivityViewModel::class.java)
     }
 
     private fun navigateToOutputPathActivity() {

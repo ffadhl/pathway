@@ -1,5 +1,6 @@
 package com.fadhlalhafizh.pathway.app.ui.path.outputpath
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,5 +12,6 @@ class OutputPathActivityViewModel : ViewModel() {
 
     fun setResult(result: ResultMajorResponse) {
         _resultLiveData.value = result
+        Log.d("OutputPathActivityViewModel", "Result set: $result")
     }
 }

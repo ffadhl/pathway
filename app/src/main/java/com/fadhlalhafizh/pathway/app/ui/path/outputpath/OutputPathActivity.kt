@@ -2,6 +2,7 @@ package com.fadhlalhafizh.pathway.app.ui.path.outputpath
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.fadhlalhafizh.pathway.app.ui.path.inputpath.InputPathActivity
@@ -38,6 +39,8 @@ class OutputPathActivity : AppCompatActivity() {
     }
 
     private fun displayResult(result: ResultMajorResponse) {
+        Log.d("OutputPathActivity", "Result: $result")
         binding.tvOutputResult.text = result.prediksiJurusan
     }
+
 }
