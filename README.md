@@ -31,6 +31,23 @@ Every year, the number of students continuing their education to bachelor's and 
 ## Android Section
 This is Mobile Development Section of this repo. Written here are information about what this android studio project needed and how it works conceptually.
 
+## UI/UX Design [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white)]
+Link Figma : https://www.figma.com/file/z0QoePuj5yk9A9CG6UkQ3K/Capstone-Project?type=design&node-id=35%3A2&mode=design&t=85JLlOl301vgQocO-1
+
+## Features
+- [x] Friendly User Interface
+- [x] Welcome Activity
+- [x] Login
+- [x] Register
+- [x] Bottom Navigation
+- [x] University Feature
+- [x] Profession Feature
+- [x] Full Time Feature in Profession Page
+- [x] Internship Feature in Profession Page
+- [x] List With Recycler of University and Profession inculde Full Time and Internship
+- [x] Goals page as Favorite or Bookmarks on Major, University, and Profession
+- [x] Input Passion and will get recommend passion for user
+
 ## Installation
 
 ### 1. Clone this Project to your Computer
