@@ -4,9 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.fadhlalhafizh.pathway.app.ui.path.outputpath.OutputPathActivity
+import com.fadhlalhafizh.pathway.app.ui.path.outputpath.OutputPathActivityViewModel
 import com.fadhlalhafizh.pathway.app.viewmodel.ViewModelFactory
-import com.fadhlalhafizh.pathway.data.remote.response.ResultMajorResponse
 import com.fadhlalhafizh.pathway.databinding.ActivityInputPathBinding
 
 class InputPathActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class InputPathActivity : AppCompatActivity() {
     private val viewModelInput by viewModels<InputPathActivityViewModel> {
         ViewModelFactory.getInstance(this)
     }
+    private var viewModelOutput: OutputPathActivityViewModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +25,23 @@ class InputPathActivity : AppCompatActivity() {
 
         window.setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
         setupSubmitButton()
+
+        // Observe the resultLiveData
+        viewModelInput.resultLiveData.observe(this) { result ->
+            result?.let {
+                viewModelOutput?.setResult(result)
+                navigateToOutputPathActivity()
+            }
+        }
+
+        // Initialize viewModelOutput
+        viewModelOutput = ViewModelProvider(this).get(OutputPathActivityViewModel::class.java)
+    }
+
+    private fun navigateToOutputPathActivity() {
+        val intent = Intent(this, OutputPathActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun setupSubmitButton() {
@@ -36,11 +55,4 @@ class InputPathActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToOutputPathActivity(result: ResultMajorResponse) {
-        val intent = Intent(this, OutputPathActivity::class.java)
-        intent.putExtra("PREDICTION_RESULT", result.prediksiJurusan)
-        intent.putExtra("MESSAGE", result.message)
-        startActivity(intent)
-        finish()
-    }
 }

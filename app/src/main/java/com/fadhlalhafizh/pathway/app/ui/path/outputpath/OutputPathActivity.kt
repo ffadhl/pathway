@@ -3,30 +3,27 @@ package com.fadhlalhafizh.pathway.app.ui.path.outputpath
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.fadhlalhafizh.pathway.R
-import com.fadhlalhafizh.pathway.app.adapter.output.OutputRelatedMajorAdapter
+import androidx.lifecycle.ViewModelProvider
 import com.fadhlalhafizh.pathway.app.ui.path.inputpath.InputPathActivity
+import com.fadhlalhafizh.pathway.data.remote.response.ResultMajorResponse
 import com.fadhlalhafizh.pathway.databinding.ActivityOutputPathBinding
 
 class OutputPathActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityOutputPathBinding
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: OutputRelatedMajorAdapter
+    private lateinit var viewModel: OutputPathActivityViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityOutputPathBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        recyclerView = findViewById(R.id.rv_relatedMajor)
-        adapter = OutputRelatedMajorAdapter()
+        viewModel = ViewModelProvider(this)[OutputPathActivityViewModel::class.java]
 
-        recyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerView.adapter = adapter
+        viewModel.resultLiveData.observe(this) { result ->
+            result?.let {
+                displayResult(it)
+            }
+        }
 
         goBack()
     }
@@ -38,5 +35,9 @@ class OutputPathActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+
+    private fun displayResult(result: ResultMajorResponse) {
+        binding.tvOutputResult.text = result.prediksiJurusan
     }
 }
