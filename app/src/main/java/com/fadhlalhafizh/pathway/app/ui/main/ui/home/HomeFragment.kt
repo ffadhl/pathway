@@ -17,6 +17,7 @@ import com.fadhlalhafizh.pathway.app.adapter.home.HomeUniversityAdapter
 import com.fadhlalhafizh.pathway.app.ui.path.inputpath.InputPathActivity
 import com.fadhlalhafizh.pathway.app.ui.welcome.WelcomeActivity
 import com.fadhlalhafizh.pathway.app.viewmodel.ViewModelFactory
+import com.fadhlalhafizh.pathway.data.model.Job
 import com.fadhlalhafizh.pathway.data.model.University
 import com.fadhlalhafizh.pathway.databinding.FragmentHomeBinding
 import de.hdodenhof.circleimageview.CircleImageView
@@ -30,10 +31,10 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var rvUniversity: RecyclerView
-    private val list = ArrayList<University>()
+    private val listUniversity = ArrayList<University>()
 
-    private lateinit var recyclerView2: RecyclerView
-    private lateinit var adapter2: HomeProfessionAdapter
+    private lateinit var rvJob: RecyclerView
+    private val listJob = ArrayList<Job>()
     private val viewModelHome by viewModels<HomeViewModel> {
         ViewModelFactory.getInstance(requireContext())
     }
@@ -48,16 +49,13 @@ class HomeFragment : Fragment() {
 
         rvUniversity = binding.rvTopUniversity
         rvUniversity.setHasFixedSize(true)
+        rvJob = binding.rvNewestJobs
+        rvJob.setHasFixedSize(true)
 
-        list.addAll(getListMadrid())
+        listUniversity.addAll(getListUniversity())
         showRecyclerList()
-
-        recyclerView2 = root.findViewById(R.id.rv_newestJobs)
-        adapter2 = HomeProfessionAdapter()
-
-        recyclerView2.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        recyclerView2.adapter = adapter2
+        listJob.addAll(getListJob())
+        showRecyclerListJob()
 
         val pathGoalsCardView = root.findViewById<CardView>(R.id.cv_pathGoals)
         pathGoalsCardView.setOnClickListener {
@@ -74,7 +72,7 @@ class HomeFragment : Fragment() {
     }
 
     @SuppressLint("Recycle")
-    private fun getListMadrid(): ArrayList<University> {
+    private fun getListUniversity(): ArrayList<University> {
         val dataUniversity = resources.getStringArray(R.array.data_university)
         val dataAddress = resources.getStringArray(R.array.data_address)
         val dataDescription = resources.getStringArray(R.array.data_description)
@@ -112,8 +110,53 @@ class HomeFragment : Fragment() {
     private fun showRecyclerList() {
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         rvUniversity.layoutManager = layoutManager
-        val listHeroAdapter = HomeUniversityAdapter(list)
-        rvUniversity.adapter = listHeroAdapter
+        val listUniversityAdapter = HomeUniversityAdapter(listUniversity)
+        rvUniversity.adapter = listUniversityAdapter
+    }
+
+    @SuppressLint("Recycle")
+    private fun getListJob(): ArrayList<Job> {
+        val dataPosition = resources.getStringArray(R.array.data_position)
+        val dataCompany = resources.getStringArray(R.array.data_company)
+        val dataDomicile = resources.getStringArray(R.array.data_domicile)
+        val dataFullOrIntern = resources.getStringArray(R.array.data_fullOrIntern)
+        val dataDescription = resources.getStringArray(R.array.data_descriptionJobs)
+        val dataPhoto = resources.obtainTypedArray(R.array.data_photoJobs)
+
+        val minSize = minOf(
+            dataPosition.size,
+            dataCompany.size,
+            dataDomicile.size,
+            dataFullOrIntern.size,
+            dataDescription.size
+        )
+
+        val listJob = ArrayList<Job>()
+
+        for (i in 0 until minSize) {
+            val job = Job(
+                dataPhoto.getResourceId(i, -1),
+                dataPosition[i],
+                dataCompany[i],
+                dataDomicile[i],
+                dataFullOrIntern[i],
+                dataDescription[i],
+            )
+            listJob.add(job)
+        }
+
+        // Recycle the TypedArray to avoid memory leaks
+        dataPhoto.recycle()
+
+        return listJob
+    }
+
+
+    private fun showRecyclerListJob() {
+        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        rvJob.layoutManager = layoutManager
+        val listJobAdapter = HomeProfessionAdapter(listJob)
+        rvJob.adapter = listJobAdapter
     }
 
 

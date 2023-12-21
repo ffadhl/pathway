@@ -25,6 +25,9 @@
         tools:ignore="LockedOrientationActivity"
         tools:targetApi="31">
         <activity
+            android:name=".app.ui.detailprofession.detailprofessionhome.DetailProfessionHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".app.ui.detailuniversity.detailuniversityhome.DetailUniversityHomeActivity"
             android:exported="false" />
 

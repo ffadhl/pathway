@@ -4,13 +4,20 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.fadhlalhafizh.pathway.R
-import com.fadhlalhafizh.pathway.app.ui.detailprofession.DetailProfessionActivity
+import com.fadhlalhafizh.pathway.app.ui.detailprofession.detailprofessionhome.DetailProfessionHomeActivity
+import com.fadhlalhafizh.pathway.data.model.Job
 
-class HomeProfessionAdapter : RecyclerView.Adapter<HomeProfessionAdapter.MyViewHolder>() {
+class HomeProfessionAdapter(private val listJob: ArrayList<Job>) : RecyclerView.Adapter<HomeProfessionAdapter.MyViewHolder>() {
     class MyViewHolder(item: View) : RecyclerView.ViewHolder(item){
-
+        val imgPhoto: ImageView = itemView.findViewById(R.id.iv_workplace)
+        val jobPosition: TextView = itemView.findViewById(R.id.tv_position)
+        val jobCompany: TextView = itemView.findViewById(R.id.tv_workPlace)
+        val jobDomicile: TextView = itemView.findViewById(R.id.tv_domicile)
+        val fullOrIntern: TextView = itemView.findViewById(R.id.tv_workDuration)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -19,23 +26,22 @@ class HomeProfessionAdapter : RecyclerView.Adapter<HomeProfessionAdapter.MyViewH
         return MyViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return 5
-    }
+    override fun getItemCount(): Int = listJob.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val positionName = "Sample Position"
-        val workPlace = "Sample Work Place"
-        val workDomicile = "Jakarta, Indonesia"
-        val fullOrIntern = "full or intern"
+        val (photo, pos, company, domicile, fullOrIntern, description, ) = listJob[position]
+        holder.imgPhoto.setImageResource(photo)
+        holder.jobPosition.text = pos
+        holder.jobCompany.text = company
+        holder.jobDomicile.text = domicile
+        holder.fullOrIntern.text = fullOrIntern
+
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(it.context, DetailProfessionActivity::class.java)
-            intent.putExtra(DetailProfessionActivity.POSITION, positionName)
-            intent.putExtra(DetailProfessionActivity.WORKPLACE, workPlace)
-            intent.putExtra(DetailProfessionActivity.DOMICILE, workDomicile)
-            intent.putExtra(DetailProfessionActivity.FULL_OR_INTERN, fullOrIntern)
-            it.context.startActivity(intent)
+            val intentDetail =
+                Intent(holder.itemView.context, DetailProfessionHomeActivity::class.java)
+            intentDetail.putExtra("key_Job", listJob[holder.adapterPosition])
+            holder.itemView.context.startActivity(intentDetail)
         }
     }
 }
