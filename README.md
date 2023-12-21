@@ -37,7 +37,7 @@ Link Figma : https://www.figma.com/file/z0QoePuj5yk9A9CG6UkQ3K/Capstone-Project?
 ## Tools
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white) 
 ![Kotlin](https://img.shields.io/badge/kotlin-%230095D5.svg?&style=for-the-badge&logo=kotlin&logoColor=white)
-![AndroidStudio](https://img.shields.io/badge/android%20studio-%233DDC84.svg?&style=for-the-badge&logo=android%20studio&logoColor=black)!
+![AndroidStudio](https://img.shields.io/badge/android%20studio-%233DDC84.svg?&style=for-the-badge&logo=android%20studio&logoColor=white)
 
 ## Features
 - [x] Friendly User Interface
@@ -52,6 +52,22 @@ Link Figma : https://www.figma.com/file/z0QoePuj5yk9A9CG6UkQ3K/Capstone-Project?
 - [x] List With Recycler of University and Profession inculde Full Time and Internship
 - [x] Goals page as Favorite or Bookmarks on Major, University, and Profession
 - [x] Input Passion and will get recommend passion for user
+
+## How to Get Major Recommend?
+1. Open the app.
+2. Register if you dont have an account. or,
+3. Login to your account.
+4. Click the **Target Logo** or under the words **"Get Your Path"** in Home.
+5. There are rules so that the recommend results are maximized. Then the User enters Passion, interests and talents
+6. Click **Submit** button and wait for the result.
+7. And, Voila. there is your Major recommend.
+
+## Screenshot
+
+## Demo Application
+
+## Demo Application
+Apk file for app installation can be found on our latest release [here]() or [here]() section. Please beware that this app require permission to get your location and also require Android version Lollipop 5.0 or above.
 
 ## Installation
 
