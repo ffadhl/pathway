@@ -1,8 +1,4 @@
 # Bangkit-Project-2023
-## PathWay
-PathWay is an application designed to assist users in obtaining recommendations for majors and universities that align with their interests. Users will be directed to answer a series of questions as part of an interest survey, after which PathWay will search for the best and most favored majors and universities based on the data provided by the user. PathWay will also provide several references for relevant career pathways related to the major chosen by the user.
-Every year, the number of students continuing their education to bachelor's and diploma levels continues to increase. This is due to the job market's demand for employees with at least a bachelor's degree. The initial step involves choosing a major, which is a branch of knowledge selected by prospective students based on their interests or talents discovered during their education. Irene Guntur, M.Psi., Psi., CGA, an Educational Psychologist from Integrity Development Flexibility (IDF), as quoted from okezone.com (Harahap, 2015), points out that as many as 87% of students in Indonesia choose the wrong major.
-
 ## Introduction 👋
 **Team ID: CH2-PS447**
 
@@ -15,6 +11,25 @@ Bangkit ID|Name|Learning Path|University|LinkedIn
 |M283BSY1528|Azmal Syafiq Fakhri|Machine Learning|Universitas Negeri Semarang|[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/azmal-syafiq-fakhri/)|
 |M226BSY0970|Alfadli Rahmat Putra|Machine Learning|Universitas Jambi|[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alfadlirputra/)|
 |C193BSY3803|Sulaiman Faqih|Cloud Computing| Universitas Bina Sarana Informatika|[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sulaimanfaqih/)|
+
+## PathWay
+PathWay is an application designed to assist users in obtaining recommendations for majors and universities that align with their interests. Users will be directed to answer a series of questions as part of an interest survey, after which PathWay will search for the best and most favored majors and universities based on the data provided by the user. PathWay will also provide several references for relevant career pathways related to the major chosen by the user.
+Every year, the number of students continuing their education to bachelor's and diploma levels continues to increase. This is due to the job market's demand for employees with at least a bachelor's degree. The initial step involves choosing a major, which is a branch of knowledge selected by prospective students based on their interests or talents discovered during their education. Irene Guntur, M.Psi., Psi., CGA, an Educational Psychologist from Integrity Development Flexibility (IDF), as quoted from okezone.com (Harahap, 2015), points out that as many as 87% of students in Indonesia choose the wrong major.
+
+## Project Documents:
+- Project Brief : https://docs.google.com/document/d/1FGx8QWzEix4CUUx7TxDJExiJ2rkDL17igeuhB6tnTsg/edit?usp=sharing
+- Final presentation : https://www.canva.com/design/DAF3Y5dN4xs/e-jyhI8AglARCTGVZqvB2w/edit?utm_content=DAF3Y5dN4xs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## Repositories
+
+|    Branch Name     |                                      Repositories Link                                         |
+| :----------------: | :--------------------------------------------------------------------------------------: |
+| Mobile Development | [MD Repositoires](https://github.com/ffadhl/PathWay/) |
+|  Cloud Computing   | [CC Repositoires](https://github.com/slmnfqh/CH2-PS447-PathWay)      |
+|  Machine Learning  | [ML Repositoires](https://github.com/slmnfqh/CH2-PS447-PathWay-ML)       |
+
+## Android Section
+This is Mobile Development Section of this repo. Written here are information about what this android studio project needed and how it works conceptually.
 
 ## Installation
 
