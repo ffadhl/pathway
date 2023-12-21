@@ -24,9 +24,9 @@ Every year, the number of students continuing their education to bachelor's and 
 
 |    Branch Name     |                                      Repositories Link                                         |
 | :----------------: | :--------------------------------------------------------------------------------------: |
-| Mobile Development | [![https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white](https://github.com/ffadhl/PathWay/) |
-|  Cloud Computing   | [![https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white](https://github.com/slmnfqh/CH2-PS447-PathWay)      |
-|  Machine Learning  | [![https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white](https://github.com/slmnfqh/CH2-PS447-PathWay-ML)       |
+| Mobile Development | [![Github](https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/ffadhl/PathWay/) |
+|  Cloud Computing   | [![Github](https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/slmnfqh/CH2-PS447-PathWay)      |
+|  Machine Learning  | [![Github](https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/slmnfqh/CH2-PS447-PathWay-ML)       |
 
 ## Android Section
 This is Mobile Development Section of this repo. Written here are information about what this android studio project needed and how it works conceptually.
