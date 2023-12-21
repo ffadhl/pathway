@@ -116,4 +116,169 @@
     <string name="inputEmail">Enter email</string>
     <string name="inputPassword">Enter password</string>
 
+    <!--    Input Path-->
+    <string name="inputPath">Input Path</string>
+    <string name="outputDesc">It looks like you\'re a good fit to choose</string>
+    <string name="outputResult">Department Result</string>
+    <string name="outputProfDesc">Furthermore, you can become a :</string>
+    <string name="outputDesc2">Another related major for you</string>
+    <string name="outputResultProfession">Profession Recomendation</string>
+    <string name="presentation">x%</string>
+    <string name="relatedMajor">Related Major</string>
+
+    <!--    Dummy Model University-->
+    <string-array name="data_university">
+        <item>Universitas Indonesia</item>
+        <item>Universitas Gajah Mada</item>
+        <item>Universitas Airlangga</item>
+        <item>Institut Teknologi Bandung</item>
+        <item>Universitas Brawijaya</item>
+        <item>Universitas Bina Nusantara</item>
+        <item>Universitas Negeri Semarang</item>
+        <item>institut Pertanian Bogor</item>
+        <item>Universitas Sriwijaya</item>
+        <item>Universitas Pendidikan Indonesia</item>
+    </string-array>
+
+    <string-array name="data_address">
+        <item>Jl. Lingkar, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424</item>
+        <item>Bulaksumur, Caturtunggal, Kec. Depok, Kabupaten Sleman, Yogyakarta 55281.</item>
+        <item>Jl. Mayjen Prof. Dr. Moestopo No.47, Pacar Kembang, Kec. Tambaksari</item>
+        <item>ITB Kampus Ganesha Jl. Ganesha 10. Bandung Jawa Barat Indonesia.</item>
+        <item>Jl. Veteran No.16, Malang, Jawa Timur</item>
+        <item>Kampus Anggrek Jl. Kebon Jeruk Raya No. 27, Kebon Jeruk Jakarta Barat 11530</item>
+        <item>Gedung H (Rektorat) Kampus Unnes Sekaran Gunungpati, Semarang</item>
+        <item>iJl. Raya Dramaga, Bogor 16680 Jawa Barat.</item>
+        <item>Jl Raya Palembang Prabumulih Km. 32 Inderalaya Ogan Komering Ilir.</item>
+        <item>Jl. Dr. Setiabudhi No. 229 Bandung 40154. Jawa Barat</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Universitas Indonesia adalah sebuah perguruan tinggi negeri di Indonesia. Kampus utamanya terletak di bagian Utara dari Depok, Jawa Barat tepat di perbatasan antara Depok dengan wilayah Jakarta Selatan, dan kampusnya di Jakarta Barat.</item>
+        <item>Universitas Gadjah Mada adalah sebuah perguruan tinggi negeri di Indonesia. Kampus utamanya terletak di Yogyakarta, Daerah Istimewa Yogyakarta, Indonesia. Universitas ini didirikan oleh Pemerintah Republik Indonesia pada tanggal 19 Desember 1949.</item>
+        <item>Universitas Airlangga adalah sebuah perguruan tinggi negeri di Indonesia yang berdiri pada tanggal 10 November 1954 di Surabaya. Universitas ini merupakan perguruan tinggi negeri tertua di luar Jakarta.</item>
+        <item>Institut Teknologi Bandung adalah sebuah perguruan tinggi negeri di Indonesia yang berkedudukan di Kota Bandung. ITB merupakan perguruan tinggi teknik pertama di Indonesia.</item>
+        <item>Universitas Brawijaya adalah sebuah perguruan tinggi negeri di Indonesia yang berdiri pada tanggal 5 Januari 1963. Kampus utamanya terletak di Kota Malang, Jawa Timur.</item>
+        <item>Universitas Bina Nusantara adalah sebuah perguruan tinggi swasta di Indonesia yang berdiri pada tanggal 21 Juni 1996. Kampus utamanya terletak di Jakarta Barat.</item>
+        <item>Universitas Negeri Semarang adalah sebuah perguruan tinggi negeri di Indonesia yang berdiri pada tanggal 16 Mei 1965. Kampus utamanya terletak di Kota Semarang, Jawa Tengah.</item>
+        <item>Institut Pertanian Bogor adalah sebuah perguruan tinggi negeri di Indonesia yang berdiri pada tanggal 1 September 1963. Kampus utamanya terletak di Kota Bogor, Jawa Barat.</item>
+        <item>Universitas Sriwijaya adalah sebuah perguruan tinggi negeri di Indonesia yang berdiri pada tanggal 29</item>
+    </string-array>
+
+    <string-array name="data_worldRank">
+        <item>44</item>
+        <item>54</item>
+        <item>64</item>
+        <item>74</item>
+        <item>84</item>
+        <item>94</item>
+        <item>104</item>
+        <item>114</item>
+        <item>124</item>
+        <item>134</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/ui</item>
+        <item>@drawable/ugm</item>
+        <item>@drawable/unair</item>
+        <item>@drawable/itb</item>
+        <item>@drawable/ub</item>
+        <item>@drawable/binus</item>
+        <item>@drawable/unnes</item>
+        <item>@drawable/ipb</item>
+        <item>@drawable/unsri</item>
+        <item>@drawable/upi</item>
+    </integer-array>
+
+    <integer-array name="data_photoBackground">
+        <item>@drawable/uibackground</item>
+        <item>@drawable/ugmbackground</item>
+        <item>@drawable/unairbackground</item>
+        <item>@drawable/itbbackground</item>
+        <item>@drawable/ubbackground</item>
+        <item>@drawable/binusbackground</item>
+        <item>@drawable/unnesbackground</item>
+        <item>@drawable/ipbbackround</item>
+        <item>@drawable/unsribackground</item>
+        <item>@drawable/upibackground</item>
+    </integer-array>
+
+    <!--    Dummy Model Jobs-->
+    <string-array name="data_position">
+        <item>Software Engineer</item>
+        <item>UI/UX Designer</item>
+        <item>Frontend Developer</item>
+        <item>Backend Developer</item>
+        <item>Mobile Developer</item>
+        <item>Fullstack Developer</item>
+        <item>DevOps Engineer</item>
+        <item>Product Manager</item>
+        <item>Project Manager</item>
+        <item>Business Analyst</item>
+    </string-array>
+
+    <string-array name="data_company">
+        <item>Gojek</item>
+        <item>Traveloka</item>
+        <item>Tokopedia</item>
+        <item>shopee</item>
+        <item>shopee</item>
+        <item>telkomsel</item>
+        <item>Gojek</item>
+        <item>Shopee</item>
+        <item>Travloka</item>
+        <item>Xl Axiata</item>
+    </string-array>
+
+    <string-array name="data_domicile">
+        <item>Jakarta, Indonesia</item>
+        <item>Bandung, Indonesia</item>
+        <item>Surabaya, Indonesia</item>
+        <item>Malang, Indonesia</item>
+        <item>Yogyakarta, Indonesia</item>
+        <item>Medan, Indonesia</item>
+        <item>Denpasar, Indonesia</item>
+        <item>Padang, Indonesia</item>
+        <item>Manado, Indonesia</item>
+        <item>Palu, Indonesia</item>
+    </string-array>
+
+    <string-array name="data_fullOrIntern">
+        <item>Fulltime</item>
+        <item>Internship</item>
+        <item>Internship</item>
+        <item>Fulltime</item>
+        <item>Fulltime</item>
+        <item>Internship</item>
+        <item>Fulltime</item>
+        <item>Fulltime</item>
+        <item>Internship</item>
+        <item>Fulltime</item>
+    </string-array>
+
+    <string-array name="data_descriptionJobs">
+        <item>Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest-growing decacorn building an on-demand empire.</item>
+        <item>Traveloka is a technology company based in Jakarta, Indonesia. Founded in 2012 by ex-Silicon Valley engineers and aims to revolutionize human mobility with technology. Today Traveloka is expanding its reach by operating in six countries and experimenting with new endeavors that will create large impact in the markets and industries we touch.</item>
+        <item>Tokopedia is an Indonesian technology company specializing in e-commerce. It was founded in 2009 by William Tanuwijaya and Leontinus Alpha Edison. As of 2018, Tokopedia has 4,000 employees, 90 million monthly active users, and is valued at $7 billion.</item>
+        <item>Shopee is the leading e-commerce platform in Southeast Asia and Taiwan. It is a platform tailored for the region, providing customers with an easy, secure and fast online shopping experience through strong payment and logistical support. Shopee aims to continually enhance its platform and become the region’s e-commerce destination of choice.</item>
+        <item>Shopee is the leading e-commerce platform in Southeast Asia and Taiwan. It is a platform tailored for the region, providing customers with an easy, secure and fast online shopping experience through strong payment and logistical support. Shopee aims to continually enhance its platform and become the region’s e-commerce destination of choice.</item>
+        <item>Telkomsel is a brand name of a GSM and UMTS Mobile phone network operator which operates in Indonesia. It was founded in 1995, and is a subsidiary of Telkom Indonesia. The company currently has 178 million subscribers.</item>
+        <item>Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest-growing decacorn building an on-demand empire.</item>
+        <item>Shopee is the leading e-commerce platform in Southeast Asia and Taiwan. It is a platform tailored for the region, providing customers with an easy, secure and fast online shopping</item>
+    </string-array>
+
+    <string-array name="data_photoJobs">
+        <item>@drawable/dummywork</item>
+        <item>@drawable/traveloka</item>
+        <item>@drawable/tokopedia</item>
+        <item>@drawable/shopee</item>
+        <item>@drawable/shopee</item>
+        <item>@drawable/telkomsel</item>
+        <item>@drawable/dummywork</item>
+        <item>@drawable/shopee</item>
+        <item>@drawable/traveloka</item>
+        <item>@drawable/xl</item>
+    </string-array>
+
 </resources>

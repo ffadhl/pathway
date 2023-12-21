@@ -5,14 +5,14 @@ import com.google.gson.annotations.SerializedName
 data class ErrorResponse(
 
 	@field:SerializedName("message")
-	val message: String? = null,
+	val message: String,
 
 	@field:SerializedName("errors")
-	val errors: Errors? = null
+	val errors: Errors
 )
 
 data class Errors(
 
 	@field:SerializedName("email")
-	val email: String? = null
+	val email: String
 )

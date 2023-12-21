@@ -34,6 +34,7 @@ class RegisterViewModel(private val userRepository: UserRepository) : ViewModel(
                     _isErrorMessage.value = result.getOrNull()?.message
                         ?: "the email has already been used"
                 }
+
             } catch (e: HttpException) {
                 _isErrorMessage.value = "Network error: ${e.message}"
             } catch (e: Exception) {

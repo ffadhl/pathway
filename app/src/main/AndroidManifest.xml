@@ -24,6 +24,9 @@
         android:theme="@style/Theme.PathWay"
         tools:ignore="LockedOrientationActivity"
         tools:targetApi="31">
+        <activity
+            android:name=".app.ui.detailuniversity.detailuniversityhome.DetailUniversityHomeActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
