@@ -3,6 +3,19 @@
 PathWay is an application designed to assist users in obtaining recommendations for majors and universities that align with their interests. Users will be directed to answer a series of questions as part of an interest survey, after which PathWay will search for the best and most favored majors and universities based on the data provided by the user. PathWay will also provide several references for relevant career pathways related to the major chosen by the user.
 Every year, the number of students continuing their education to bachelor's and diploma levels continues to increase. This is due to the job market's demand for employees with at least a bachelor's degree. The initial step involves choosing a major, which is a branch of knowledge selected by prospective students based on their interests or talents discovered during their education. Irene Guntur, M.Psi., Psi., CGA, an Educational Psychologist from Integrity Development Flexibility (IDF), as quoted from okezone.com (Harahap, 2015), points out that as many as 87% of students in Indonesia choose the wrong major.
 
+## Introduction 👋
+**Team ID: CH2-PS447**
+
+Hi everyone! We are from CH2-PS447. We consist of 5 people and these are my team members:
+
+Bangkit ID|Name|Learning Path|University|LinkedIn
+|--|--|--|--|--
+|A283BSY2466|Fadhl Al - Hafizh |Mobile Development|Universitas Negeri Semarang|[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fadhlhafizh/)|
+|M283BSY1442|Muhammad Raiz Shiddiq Pratama|Machine Learning|Universitas Negeri Semarang|[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammad-raiz-shiddiq-pratama-330037200/)|
+|M283BSY1528|Azmal Syafiq Fakhri|Machine Learning|Universitas Negeri Semarang|[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/azmal-syafiq-fakhri/)|
+|M226BSY0970|Alfadli Rahmat Putra|Machine Learning|Universitas Jambi|[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alfadlirputra/)|
+|C193BSY3803|Sulaiman Faqih|Cloud Computing| Universitas Bina Sarana Informatika|[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sulaimanfaqih/)|
+
 ## Installation
 
 ### 1. Clone this Project to your Computer
