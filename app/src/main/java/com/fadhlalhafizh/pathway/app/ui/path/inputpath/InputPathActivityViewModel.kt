@@ -17,17 +17,15 @@ class InputPathActivityViewModel(private val userRepository: UserRepository) : V
 
     fun processInput(input: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            // Make a network request to get the answer
             val answerRequest = AnswerRequest(input)
             val result = userRepository.getAnswer(answerRequest)
 
-            // Handle the result
             result.onSuccess { resultMajorResponse ->
                 _resultLiveData.postValue(resultMajorResponse)
             }
 
             result.onFailure { exception ->
-                // Handle failure if needed
+
             }
         }
     }

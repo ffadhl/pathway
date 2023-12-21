@@ -3,24 +3,25 @@ package com.fadhlalhafizh.pathway.app.ui.path.outputpath
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import com.fadhlalhafizh.pathway.app.ui.path.inputpath.InputPathActivity
+import com.fadhlalhafizh.pathway.app.viewmodel.ViewModelFactory
 import com.fadhlalhafizh.pathway.data.remote.response.ResultMajorResponse
 import com.fadhlalhafizh.pathway.databinding.ActivityOutputPathBinding
 
 class OutputPathActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOutputPathBinding
-    private lateinit var viewModel: OutputPathActivityViewModel
-
+    private val viewModels by viewModels<OutputPathActivityViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityOutputPathBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        viewModel = ViewModelProvider(this)[OutputPathActivityViewModel::class.java]
-
-        viewModel.resultLiveData.observe(this) { result ->
+        val inputText = intent.getStringExtra("input")
+        viewModels.processInput(inputText.toString())
+        viewModels.resultLiveData.observe(this) { result ->
             result?.let {
                 displayResult(it)
             }
@@ -42,5 +43,4 @@ class OutputPathActivity : AppCompatActivity() {
         Log.d("OutputPathActivity", "Result: $result")
         binding.tvOutputResult.text = result.prediksiJurusan
     }
-
 }
