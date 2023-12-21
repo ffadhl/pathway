@@ -28,11 +28,16 @@ Every year, the number of students continuing their education to bachelor's and 
 |  Cloud Computing   | [![Github](https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/slmnfqh/CH2-PS447-PathWay)      |
 |  Machine Learning  | [![Github](https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/slmnfqh/CH2-PS447-PathWay-ML)       |
 
-## Android Section
+## Android Section [![Android]https://img.shields.io/badge/android-%233DDC84.svg?&style=for-the-badge&logo=android&logoColor=white)]
 This is Mobile Development Section of this repo. Written here are information about what this android studio project needed and how it works conceptually.
 
 ## UI/UX Design [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white)]
 Link Figma : https://www.figma.com/file/z0QoePuj5yk9A9CG6UkQ3K/Capstone-Project?type=design&node-id=35%3A2&mode=design&t=85JLlOl301vgQocO-1
+
+## Tools
+[![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white)] 
+[![Kotlin](https://img.shields.io/badge/kotlin-%230095D5.svg?&style=for-the-badge&logo=kotlin&logoColor=white)] 
+[![AndroidStudio](https://img.shields.io/badge/android%20studio-%233DDC84.svg?&style=for-the-badge&logo=android%20studio&logoColor=black)] 
 
 ## Features
 - [x] Friendly User Interface
