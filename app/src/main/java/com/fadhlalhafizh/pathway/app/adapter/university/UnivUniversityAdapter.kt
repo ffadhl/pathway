@@ -11,9 +11,8 @@ import com.fadhlalhafizh.pathway.R
 import com.fadhlalhafizh.pathway.app.ui.detailuniversity.DetailUniversityActivity
 import com.fadhlalhafizh.pathway.data.model.University
 
-class UnivUniversityAdapter(private val listUniversity: ArrayList<University>) :
-    RecyclerView.Adapter<UnivUniversityAdapter.MyViewHolder>() {
-    class MyViewHolder(item: View) : RecyclerView.ViewHolder(item) {
+class UnivUniversityAdapter(private val listUniversity: ArrayList<University>): RecyclerView.Adapter<UnivUniversityAdapter.MyViewHolder>() {
+    class MyViewHolder(item : View): RecyclerView.ViewHolder(item) {
         val imgPhoto: ImageView = itemView.findViewById(R.id.iv_university)
         val imgPhotoBackground: ImageView = itemView.findViewById(R.id.iv_background_university)
         val universityName: TextView = itemView.findViewById(R.id.tv_universityNames)
@@ -22,8 +21,7 @@ class UnivUniversityAdapter(private val listUniversity: ArrayList<University>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_university, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_university, parent, false)
         return MyViewHolder(view)
     }
 
