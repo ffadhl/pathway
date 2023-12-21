@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.fadhlalhafizh.pathway.R
 import com.fadhlalhafizh.pathway.app.ui.main.MainActivity
+import com.fadhlalhafizh.pathway.app.ui.maps.MapsActivity
 import com.fadhlalhafizh.pathway.data.model.University
 import com.fadhlalhafizh.pathway.databinding.ActivityDetailUniversityHomeBinding
 
@@ -41,11 +42,21 @@ class DetailUniversityHomeActivity : AppCompatActivity() {
         universityDetailPhotoBackground.setImageResource(dataUniversity?.photoBackground ?: 0)
 
         goBack()
+        goToMaps()
     }
 
     private fun goBack() {
         binding.ivBackArrowDetailUniv.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+    }
+
+    private fun goToMaps() {
+        binding.cvLocationDetailUniversity.setOnClickListener {
+            val intent = Intent(this, MapsActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             finish()

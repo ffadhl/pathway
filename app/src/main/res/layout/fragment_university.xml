@@ -7,35 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".app.ui.main.ui.university.UniversityFragment" >
 
-    <com.google.android.material.search.SearchBar
-        android:id="@+id/universitySearch"
-        android:layout_width="365dp"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
-        android:hint="@string/searchBarUniversity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/universitySearchView"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_anchor="@id/universitySearch"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-    </androidx.appcompat.widget.SearchView>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/universitySearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/blue"
+            app:queryHint="@string/searchBarUniversity"
+            app:iconifiedByDefault="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </androidx.appcompat.widget.SearchView>
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_fragmentUniversity"
         android:layout_width="match_parent"
         android:layout_height="590dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/universitySearch"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
         tools:listitem="@layout/item_university" />
 </androidx.constraintlayout.widget.ConstraintLayout>

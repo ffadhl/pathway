@@ -1,10 +1,15 @@
 package com.fadhlalhafizh.pathway.app.ui.detailuniversity
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.fadhlalhafizh.pathway.R
 import com.fadhlalhafizh.pathway.app.ui.main.MainActivity
 import com.fadhlalhafizh.pathway.app.ui.maps.MapsActivity
+import com.fadhlalhafizh.pathway.data.model.University
 import com.fadhlalhafizh.pathway.databinding.ActivityDetailUniversityBinding
 
 class DetailUniversityActivity : AppCompatActivity() {
@@ -16,15 +21,26 @@ class DetailUniversityActivity : AppCompatActivity() {
         binding = ActivityDetailUniversityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val universityName = intent.getStringExtra(UNIVERSITY)
-        val universityAddress = intent.getStringExtra(ADDRESS)
-        val worldRank1 = intent.getStringExtra(WORLD_RANK1)
-        val worldRank2 = intent.getStringExtra(WORLD_RANK2)
+        val dataUniversity = if (Build.VERSION.SDK_INT >= 33) {
+            intent.getParcelableExtra<University>("key_University", University::class.java)
+        } else {
+            @Suppress("DEPRECATION")
+            intent.getParcelableExtra<University>("key_University")
+        }
 
-        binding.tvUniversitiesNameDetailUniv.text = universityName
-        binding.tvUniversitiesAddDetailUniv.text = universityAddress
-        binding.tvWorldRank1DetailUniv.text = worldRank1
-        binding.tvWorldRank2DetailUniv.text = worldRank2
+        val universityDetailName = findViewById<TextView>(R.id.tv_universitiesName_detailUniv)
+        val universityDetailAddress = findViewById<TextView>(R.id.tv__universitiesAdd_detailUniv)
+        val universityDetailRank = findViewById<TextView>(R.id.tv_worldRank2_detailUniv)
+        val universityDetailDescription = findViewById<TextView>(R.id.tv_desc_detailUniv)
+        val universityDetailPhoto = findViewById<ImageView>(R.id.iv_univ_detailUniversity)
+        val universityDetailPhotoBackground = findViewById<ImageView>(R.id.iv_background_detailUniv)
+
+        universityDetailName.text = dataUniversity?.university ?: "Unknown Name!"
+        universityDetailAddress.text = dataUniversity?.address ?: "Unknown Address!"
+        universityDetailRank.text = dataUniversity?.worldRank ?: "?"
+        universityDetailDescription.text = dataUniversity?.description ?: "No Data Description can be found!"
+        universityDetailPhoto.setImageResource(dataUniversity?.photo ?: 0)
+        universityDetailPhotoBackground.setImageResource(dataUniversity?.photoBackground ?: 0)
 
         goBack()
         goToMaps()
