@@ -7,11 +7,9 @@ Every year, the number of students continuing their education to bachelor's and 
 
 ### 1. Clone this Project to your Computer
 ```bash
-git clone https://Bangkit-Capstone-Project/MobileDev_AppsProject.git
+git clone https://github.com/ffadhl/PathWay.git
 ```
-
 or you can use Android Studio 
-
 File > New > Project from Version Control ...
 
 ### 2. Open the Project in your Android Studio
@@ -19,6 +17,5 @@ Open Android Studio and select open an existing project.
 
 ### 3. Run Project in Android Studio
 Wait for Gradle Build to Finish and finally press the `Run > Run ‘app’`. Now the app has been installed in your phone / emulator. Make sure that you have configured your android device or emulator 
-
 
 ## Thank You :)
