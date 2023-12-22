@@ -1,7 +1,9 @@
 # Bangkit-Project-2023
 ## Introduction 👋
 **Team ID: CH2-PS447**
-
+<p align="center">
+  <img src="https://github.com/ffadhl/PathWay/blob/master/assetReadMe/member.jpg">
+</p>
 Hi everyone! We are from CH2-PS447. We consist of 5 people and these are my team members:
 
 Bangkit ID|Name|Learning Path|University|LinkedIn
@@ -63,7 +65,15 @@ Link Figma : https://www.figma.com/file/z0QoePuj5yk9A9CG6UkQ3K/Capstone-Project?
 7. And, Voila. there is your Major recommend.
 
 ## Screenshot
-
+<p align="center">
+  <img src="https://github.com/ffadhl/PathWay/blob/master/assetReadMe/1.jpg">
+</p>
+<p align="center">
+  <img src="https://github.com/ffadhl/PathWay/blob/master/assetReadMe/2.jpg">
+</p>
+<p align="center">
+  <img src="https://github.com/ffadhl/PathWay/blob/master/assetReadMe/3.jpg">
+</p>
 ## Demo Application
 
 ## Demo Application
