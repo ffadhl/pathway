@@ -91,7 +91,7 @@
 
             <TextView
                 android:id="@+id/tv_resultProfession"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/outputResultProfession"
@@ -121,7 +121,7 @@
                     style="@style/blueButton"
                     android:layout_width="210dp"
                     android:layout_height="55dp"
-                    android:text="@string/submitButton" />
+                    android:text="@string/saveButton" />
 
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>

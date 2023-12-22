@@ -125,6 +125,7 @@
     <string name="outputResultProfession">Profession Recomendation</string>
     <string name="presentation">x%</string>
     <string name="relatedMajor">Related Major</string>
+    <string name="saveButton">Save</string>
 
     <!--    Dummy Model University-->
     <string-array name="data_university">

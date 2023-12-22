@@ -7,17 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".app.ui.main.ui.home.HomeFragment" >
 
-    <com.google.android.material.search.SearchBar
-        android:id="@+id/goalsSearch"
-        android:layout_width="365dp"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
-        android:hint="@string/searchBarGoals"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-    </com.google.android.material.search.SearchBar>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/professionSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/blue"
+            app:queryHint="@string/searchBarGoals"
+            app:iconifiedByDefault="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </androidx.appcompat.widget.SearchView>
+
+    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs_goals"
@@ -25,7 +40,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goalsSearch"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
         app:tabTextColor="@color/blue"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -38,18 +53,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabs_goals"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/text_goals"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
