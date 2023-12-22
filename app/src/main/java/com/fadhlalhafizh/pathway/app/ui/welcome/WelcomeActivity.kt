@@ -8,14 +8,21 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.fadhlalhafizh.pathway.app.ui.login.LoginActivity
+import com.fadhlalhafizh.pathway.app.ui.main.MainActivity
+import com.fadhlalhafizh.pathway.app.ui.main.MainViewModel
 import com.fadhlalhafizh.pathway.app.ui.register.RegisterActivity
+import com.fadhlalhafizh.pathway.app.viewmodel.ViewModelFactory
 import com.fadhlalhafizh.pathway.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityWelcomeBinding
+    private val viewModelMain by viewModels<MainViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +32,8 @@ class WelcomeActivity : AppCompatActivity() {
         viewWelcomeFullScreenSetup()
         playAnimation()
         buttonAction()
+
+        checkLoginStatus()
     }
 
     @Suppress("DEPRECATION")
@@ -66,12 +75,27 @@ class WelcomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun buttonAction() {
-        binding.btnLoginWelcome.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
-        binding.btnRegisterWelcome.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+    private fun checkLoginStatus() {
+        viewModelMain.getSession().observe(this) { user ->
+            if (user.isLogin) {
+                val intent = Intent(this, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+            }
         }
     }
+    private fun buttonAction() {
+        binding.btnLoginWelcome.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
+
+        binding.btnRegisterWelcome.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
+    }
+
 }

@@ -8,8 +8,9 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.fadhlalhafizh.pathway.app.ui.main.MainActivity
+import com.fadhlalhafizh.pathway.app.ui.login.LoginActivity
 import com.fadhlalhafizh.pathway.databinding.ActivityForgotPasswordBinding
 
 class ForgotPasswordActivity : AppCompatActivity() {
@@ -59,10 +60,21 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
     private fun goToMain() {
         binding.btnSubmit.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(intent)
-            finish()
+            showSuccessDialog()
         }
+    }
+
+    private fun showSuccessDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("Password reset link has been sent, check email")
+            .setPositiveButton("OK") { dialog, _ ->
+                // Navigate to LoginActivity
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+                dialog.dismiss()
+            }
+            .setCancelable(false)
+            .show()
     }
 }

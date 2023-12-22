@@ -116,7 +116,7 @@
     <string name="inputEmail">Enter email</string>
     <string name="inputPassword">Enter password</string>
 
-    <!--    Input Path-->
+    <!--    Input and Output Path-->
     <string name="inputPath">Input Path</string>
     <string name="outputDesc">It looks like you\'re a good fit to choose</string>
     <string name="outputResult">Department Result</string>
@@ -126,6 +126,7 @@
     <string name="presentation">x%</string>
     <string name="relatedMajor">Related Major</string>
     <string name="saveButton">Save</string>
+    <string name="PathWay">PathWay</string>
 
     <!--    Dummy Model University-->
     <string-array name="data_university">

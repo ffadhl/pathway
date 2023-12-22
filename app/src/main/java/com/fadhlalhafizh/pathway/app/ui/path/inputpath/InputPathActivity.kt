@@ -15,8 +15,6 @@ class InputPathActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         window.setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
-
-        // Observe the resultLiveData
         setupSubmitButton()
     }
 

@@ -163,6 +163,7 @@ class HomeFragment : Fragment() {
     private fun logout() {
         CoroutineScope(Dispatchers.IO).launch { viewModelHome.logout() }
         val intent = Intent(requireContext(), WelcomeActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
 
