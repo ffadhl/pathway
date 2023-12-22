@@ -74,13 +74,13 @@ Link Figma : https://www.figma.com/file/z0QoePuj5yk9A9CG6UkQ3K/Capstone-Project?
 <p align="center">
   <img src="https://github.com/ffadhl/PathWay/blob/master/assetReadMe/3.jpg">
 </p>
-## Demo Application
 
 ## Demo Application
+
+## Deploy APK
 Apk file for app installation can be found on our latest release [here]() or [here]() section. Please beware that this app require permission to get your location and also require Android version Lollipop 5.0 or above.
 
 ## Installation
-
 ### 1. Clone this Project to your Computer
 ```bash
 git clone https://github.com/ffadhl/PathWay.git
