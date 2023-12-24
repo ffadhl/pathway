@@ -74,7 +74,7 @@ Link Figma : https://www.figma.com/file/z0QoePuj5yk9A9CG6UkQ3K/Capstone-Project?
 ## Demo Application
 
 ## Deploy APK
-Apk file for app installation can be found on our latest release [here]() or [here]() section. Please beware that this app require permission to get your location and also require Android version Lollipop 5.0 or above.
+Apk file for app installation can be found on our latest release [here]() or [here](https://drive.google.com/file/d/1rAM6FLPrmt-eokTwVcow9U-yWv7HlNOB/view?usp=sharing) section. Please beware that this app require permission to get your location and also require Android version Lollipop 5.0 or above.
 
 ## Installation
 ### 1. Clone this Project to your Computer
